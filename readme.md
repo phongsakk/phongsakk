@@ -1,54 +1,38 @@
-# 👋 สวัสดีครับ ผมคือ Full-Stack Developer จาก Think Bit
+# 👋 สวัสดีครับ ผมชื่อ **พงษ์ศักดิ์ ยอดเสาดี (Phongsak Yotsaodee)**
 
-ผมเชี่ยวชาญการพัฒนา **ระบบอัตโนมัติ**, **ระบบเอกสารอิเล็กทรอนิกส์ (OCR / Classification)** และ **ระบบ Backend ที่สามารถขยายได้** พร้อมใช้งานจริงในระดับองค์กร
-
-## 🔧 Tech Stack ที่ใช้งานบ่อย
-
-### 🌐 Frontend
-
-- React + TypeScript
-- Tailwind CSS
-- Angular
-- Vite
-
-### 🖥 Backend
-
-- Node.js / Express / NestJS
-- Firebase Functions
-- Azure Functions
-- RESTful APIs
-
-### 🗄️ Database & ORM
-
-- PostgreSQL / SQL Server
-- Prisma ORM
-- Drizzle ORM
-- Cosmos DB
-
-### ☁️ Cloud & DevOps
-
-- AWS (Lambda, S3, EC2, RDS)
-- Firebase Hosting
-- Azure Blob Storage
-- Docker
-- GitHub Actions
-
-### 🧠 Tooling & Validation
-
-- Zod (schema validation)
-- OCR + Document Analysis (Azure Form Recognizer)
-- SignalR (Real-time communication)
-
-## 💼 เกี่ยวกับผม
-
-- ปัจจุบันทำงานที่ [Think Bit](https://think-bit.org) ในตำแหน่ง Full-Stack Developer  
-- สนใจการจัดการข้อมูลและการทำงานแบบ Automation เป็นพิเศษ  
-- ร่วมพัฒนาโครงการโอเพ่นซอร์สที่ช่วยให้การจัดการข้อมูลและเอกสารเป็นเรื่องง่าย  
-- ยินดีแลกเปลี่ยนความรู้และร่วมงานกับผู้ที่สนใจด้านระบบซอฟต์แวร์ทุกท่าน
+Full-Stack Developer ประจำอยู่ที่ **Think Bit Co., Ltd.**  
+มีประสบการณ์ด้านการพัฒนา Web Application, ระบบอัตโนมัติ (Automation), ระบบจัดการเอกสาร (OCR/Classification) และออกแบบระบบ Backend ที่พร้อมใช้งานในระดับองค์กร
 
 ---
 
-📫 **ติดต่อ**  
+## 🧑‍💻 ความเชี่ยวชาญหลัก (Core Expertise)
 
-- GitHub: [@phongsakk](https://github.com/phongsakk)  
-- Email: phongsak.ysd@gmail.com
+| หมวดหมู่ | เทคโนโลยี |
+|----------|-----------|
+| **🖥️ Frontend** | React (Next.js) · Angular · Tailwind CSS · TypeScript |
+| **⚙️ Backend** | Node.js (Express / NestJS) · Golang (Gin) · Firebase Functions · Azure Functions |
+| **🛢️ Database** | PostgreSQL · SQL Server · Prisma ORM · Drizzle ORM · CosmosDB |
+| **☁️ Cloud & DevOps** | AWS (Lambda, S3, EC2, RDS) · Azure Blob Storage · Firebase Hosting · Docker · GitHub Actions |
+| **🛠️ Tools & Utilities** | Zod · JWT · OCR (Azure Form Recognizer) |
+| **📄 Languages** | TypeScript · Go · PHP · Python · C# |
+
+---
+
+## 🧭 เป้าหมายในสายอาชีพ
+
+> “มุ่งเน้นการพัฒนาโซลูชันที่มีประสิทธิภาพ เข้าใจง่าย และสามารถขยายได้ในอนาคต  
+> พร้อมทั้งสนับสนุนการทำงานร่วมกันในทีมแบบ Agile และ Continuous Delivery”
+
+---
+
+## 📫 ติดต่อ
+
+- **🐱 GitHub**: [github.com/phongsakk](https://github.com/phongsakk)
+- **💼 LinkedIn**: [พงษ์ศักดิ์ ยอดเสาดี](https://www.linkedin.com/in/พงษ์ศักดิ์-ยอดเสาดี-924b361a5/)
+- **✉️ Email**: phongsak.ysd@gmail.com
+- **🌐 Facebook**: [phONGsAk.ySD](https://www.facebook.com/phONGsAk.ySD)
+
+---
+
+> ขอบคุณที่เข้ามาเยี่ยมชม GitHub ของผมครับ  
+> หากมีโอกาสร่วมงานหรือต้องการพูดคุยเกี่ยวกับเทคโนโลยี ยินดีเป็นอย่างยิ่ง 🙏
