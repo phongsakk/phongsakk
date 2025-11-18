@@ -9,10 +9,11 @@ Full-Stack Developer ประจำอยู่ที่ **Think Bit Co., Ltd.*
 
 | หมวดหมู่ | เทคโนโลยี |
 |----------|-----------|
-| **🖥️ Frontend** | React (Next.js) · Angular · Tailwind CSS · TypeScript |
+| **🖥️ Frontend** | Next.js (React) · Angular · Tailwind CSS · TypeScript |
 | **⚙️ Backend** | Node.js (Express / NestJS) · Golang (Gin) · Firebase Functions · Azure Functions |
 | **🛢️ Database** | PostgreSQL · SQL Server · Prisma ORM · Drizzle ORM · CosmosDB |
-| **☁️ Cloud & DevOps** | AWS (Lambda, S3, EC2, RDS) · Azure Blob Storage · Firebase Hosting · Docker · GitHub Actions |
+| **☁️ Cloud** | AWS (Lambda, S3, EC2, RDS) · Azure (Blob Storage, Fuctions) · Firebase (Hosting, Authentication, MessagingAPI) |
+| **🔄 CI/CD** | Docker · GitHub Actions · Jenkins |
 | **🛠️ Tools & Utilities** | Zod · JWT · OCR (Azure Form Recognizer) |
 | **📄 Languages** | TypeScript · Go · PHP · Python · C# |
 
@@ -35,4 +36,4 @@ Full-Stack Developer ประจำอยู่ที่ **Think Bit Co., Ltd.*
 ---
 
 > ขอบคุณที่เข้ามาเยี่ยมชม GitHub ของผมครับ  
-> หากมีโอกาสร่วมงานหรือต้องการพูดคุยเกี่ยวกับเทคโนโลยี ยินดีเป็นอย่างยิ่ง 🙏
+> หากมีโอกาสร่วมงานหรือต้องการพูดคุยเกี่ยวกับเทคโนโลยี ยินดีเป็นอย่างยิ่งครับ 🙏
