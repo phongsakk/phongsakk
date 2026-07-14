@@ -12,6 +12,7 @@ const CDN = "https://cdn.svglogos.dev/logos";
 
 export const techMeta: Record<TechId, TechMeta> = {
   react: { id: "react", label: "React", logo: "react", color: "#2B7A9B" },
+  nextjs: { id: "nextjs", label: "Next.js", logo: "nextjs-icon", color: "#111111" },
   typescript: {
     id: "typescript",
     label: "TypeScript",
@@ -25,11 +26,19 @@ export const techMeta: Record<TechId, TechMeta> = {
     color: "#B8860B",
   },
   nodejs: { id: "nodejs", label: "Node.js", logo: "nodejs-icon", color: "#3C8D5A" },
+  nestjs: { id: "nestjs", label: "NestJS", logo: "nestjs", color: "#E0234E" },
+  express: { id: "express", label: "Express", logo: "express", color: "#444444" },
   php: { id: "php", label: "PHP", logo: "php", color: "#6C7AB5" },
   laravel: { id: "laravel", label: "Laravel", logo: "laravel", color: "#C2410C" },
   mysql: { id: "mysql", label: "MySQL", logo: "mysql-icon", color: "#2F6F9F" },
+  postgresql: {
+    id: "postgresql",
+    label: "PostgreSQL",
+    logo: "postgresql",
+    color: "#336791",
+  },
+  prisma: { id: "prisma", label: "Prisma", logo: "prisma", color: "#2D3748" },
   aws: { id: "aws", label: "AWS", logo: "aws", color: "#C27A1C" },
-  // LINE is not available on svglogos.dev; badge still shows label
   liff: { id: "liff", label: "LINE LIFF", logo: null, color: "#06C755" },
   go: { id: "go", label: "Go", logo: "go", color: "#00ADD8" },
   python: { id: "python", label: "Python", logo: "python", color: "#3776AB" },
@@ -43,10 +52,11 @@ export const techMeta: Record<TechId, TechMeta> = {
     logo: "github-actions",
     color: "#3B7C4A",
   },
+  jenkins: { id: "jenkins", label: "Jenkins", logo: "jenkins", color: "#D24939" },
   postman: { id: "postman", label: "Postman", logo: "postman-icon", color: "#EF5B25" },
   azure: {
     id: "azure",
-    label: "Azure AI",
+    label: "Azure",
     logo: "microsoft-azure",
     color: "#0078D4",
   },
@@ -62,7 +72,12 @@ export const techMeta: Record<TechId, TechMeta> = {
     logo: "microsoft-power-bi",
     color: "#F2C811",
   },
-  firebase: { id: "firebase", label: "Firebase", logo: "firebase", color: "#FFA000" },
+  firebase: {
+    id: "firebase",
+    label: "Firebase",
+    logo: "firebase-icon",
+    color: "#FFA000",
+  },
   cloud: { id: "cloud", label: "Cloud deploy", logo: "aws", color: "#4B7A8C" },
 };
 

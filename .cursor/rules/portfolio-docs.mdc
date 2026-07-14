@@ -1,0 +1,24 @@
+---
+description: Portfolio docs location and content rewrite process for all agents
+alwaysApply: true
+---
+
+# Portfolio docs & content process
+
+เอกสารโปรเจกต์นี้อยู่ที่ **`.cursor/docs/`** — agent ทุกตัวควรอ่านและอัปเดตไฟล์ในโฟลเดอร์นี้เป็นหลัก
+
+| ไฟล์ | ใช้เมื่อ |
+|------|----------|
+| `.cursor/docs/content-process.md` | ปรับเนื้อหา resume / กระบวนการ 2 บทบาท |
+| `.cursor/docs/profile.md` | สรุปโปรไฟล์ / เนื้อหาอ้างอิง |
+| `.cursor/docs/system.md` | สแตกเว็บ / i18n / PDF |
+| `.cursor/docs/review.md` | ผลวิจารณ์ Recruiter (บังคับเขียนทุกครั้งที่มีรีวิว) |
+
+## กฎสำคัญเมื่อแก้ content
+
+1. เขียนเนื้อหาเป็น **วลีละประธาน** (ไม่ใช้ “ผม” / “I”)
+2. หลังบทบาท Recruiter วิจารณ์ร่าง **ต้องเขียนทับ** `.cursor/docs/review.md` เสมอ ห้ามรีวิวแค่ในแชท
+3. แหล่งความจริงบนเว็บคือ `src/data/resume.ts` — อัปเดตคู่กับ `.cursor/docs/profile.md` หลังได้เวอร์ชันตกลง
+4. โฟกัสตำแหน่ง: Backend → Full Stack → System Analyst
+
+รายละเอียดเต็มอยู่ใน `.cursor/docs/content-process.md`

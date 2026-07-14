@@ -1,48 +1,30 @@
 # Phongsak Resume
 
 เว็บ resume สองภาษา (ไทย / อังกฤษ) สำหรับ **พงษ์ศักดิ์ ยอดเสาดี**  
-สร้างด้วย Next.js (SSR) อ่านง่าย มีสลับภาษา และดาวน์โหลด PDF ตามภาษาที่กำลังดู
+Next.js (SSR) · สลับภาษา · ดาวน์โหลด PDF
 
-## Overview
+## เอกสาร (สำหรับคนและ AI agent)
 
-- หน้าเดียวแบบ resume: ประวัติย่อ, ตำแหน่งที่สนใจ, ประสบการณ์, ทักษะ, การศึกษา
-- สองภาษา: `/th` และ `/en`
-- ดาวน์โหลด PDF ผ่าน Print → Save as PDF ของเบราว์เซอร์
-- แสดงเฉพาะข้อมูลที่เหมาะกับเว็บสาธารณะ (ตัดเงินเดือน, ที่อยู่เต็ม, อ้างอิง ฯลฯ)
-
-## เอกสารเพิ่มเติม
+เอกสารทั้งหมดอยู่ที่ **[`.cursor/docs/`](.cursor/docs/)** — agent ทุกตัวมองเห็นโฟลเดอร์นี้ผ่าน rule / `AGENTS.md`
 
 | ไฟล์ | เนื้อหา |
 |------|---------|
-| [profile.md](profile.md) | สรุปรายละเอียดโปรไฟล์ / ประวัติ / ทักษะที่แสดงบนเว็บ |
-| [system.md](system.md) | สรุปเทคโนโลยีที่ใช้สร้างเว็บ และการเปลี่ยนภาษา UI |
+| [`.cursor/docs/profile.md`](.cursor/docs/profile.md) | สรุปโปรไฟล์ / เนื้อหาอ้างอิง |
+| [`.cursor/docs/system.md`](.cursor/docs/system.md) | สแตกเว็บ / i18n / PDF |
+| [`.cursor/docs/content-process.md`](.cursor/docs/content-process.md) | วิธีปรับเนื้อหา (วลีละประธาน + 2 บทบาท) |
+| [`.cursor/docs/review.md`](.cursor/docs/review.md) | ผลวิจารณ์ Recruiter (อัปเดตทุกครั้งที่มีรีวิว) |
+| [`AGENTS.md`](AGENTS.md) | จุดเข้าสำหรับ AI agent |
 
 ## Live site
 
-Production: [https://phongsakk-portfolio.vercel.app](https://phongsakk-portfolio.vercel.app)
+https://phongsakk-portfolio.vercel.app  
+- [/th](https://phongsakk-portfolio.vercel.app/th) · [/en](https://phongsakk-portfolio.vercel.app/en)
 
-- [/th](https://phongsakk-portfolio.vercel.app/th) — ไทย
-- [/en](https://phongsakk-portfolio.vercel.app/en) — English
-
-## เริ่มใช้งาน (local)
+## Local
 
 ```bash
 npm install
 npm run dev
 ```
 
-เปิด [http://localhost:3000](http://localhost:3000) (รีไดเรกต์ไป `/th`)
-
-| Path | ภาษา |
-|------|------|
-| [/th](http://localhost:3000/th) | ไทย |
-| [/en](http://localhost:3000/en) | English |
-
-## สคริปต์
-
-```bash
-npm run dev    # พัฒนา
-npm run build  # บิลด์
-npm run start  # รัน production
-npm run lint   # ตรวจโค้ด
-```
+เปิด http://localhost:3000 → redirect ไป `/th`

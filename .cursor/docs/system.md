@@ -19,18 +19,19 @@
 ```
 src/
   app/
-    layout.tsx              # root layout + ฟอนต์
-    globals.css             # ธีม, motion, print CSS
-    [locale]/
-      page.tsx              # หน้า resume ตาม locale (SSR)
+    layout.tsx
+    globals.css
+    [locale]/page.tsx
   components/
-    resume-view.tsx         # เลย์เอาต์ resume
-    language-switcher.tsx   # สลับภาษา UI
-    download-pdf-button.tsx # ดาวน์โหลด PDF
+    resume-view.tsx
+    language-switcher.tsx
+    download-pdf-button.tsx
+    tech-badges.tsx
   data/
-    resume.ts               # เนื้อหา TH/EN + ข้อความ UI
+    resume.ts
 public/
-  profile.png               # รูปโปรไฟล์
+  profile.png
+.cursor/docs/          # เอกสารสำหรับ AI agent / ผู้ดูแล content
 ```
 
 ## การเปลี่ยนภาษา UI
@@ -38,25 +39,22 @@ public/
 - URL เป็นตัวกำหนดภาษา: `/th` และ `/en`
 - `/` redirect ไป `/th` ผ่าน `next.config.ts`
 - ข้อมูลและข้อความ UI ทั้งสองภาษาอยู่ที่ `src/data/resume.ts` (`resumeByLocale`)
-- สลับภาษาด้วย [`LanguageSwitcher`](src/components/language-switcher.tsx) — ลิงก์ไป `/th` หรือ `/en`
+- สลับภาษาด้วย `LanguageSwitcher` — ลิงก์ไป `/th` หรือ `/en`
 - `generateMetadata` ตั้ง title / description ตามภาษา
-- องค์ประกอบ `<div lang={locale}>` ครอบเนื้อหาเพื่อ accessibility
 
 ## ดาวน์โหลด PDF
 
-- ปุ่มใน [`DownloadPdfButton`](src/components/download-pdf-button.tsx) เรียก `window.print()`
+- ปุ่ม `DownloadPdfButton` เรียก `window.print()`
 - ซ่อน UI ที่ไม่ต้องการพิมพ์ด้วย class `.no-print`
-- สไตล์พิมพ์ใน `globals.css` (`@media print`) — กระดาษ A4, พื้นขาว, ตัดเงา/พื้นหลัง
-
-ผลคือ PDF จะตรงกับภาษาที่กำลังดูอยู่ (เพราะพิมพ์หน้าที่เปิดอยู่)
+- สไตล์พิมพ์ใน `globals.css` (`@media print`)
 
 ## คำสั่งที่ใช้บ่อย
 
 ```bash
-npm run dev    # พัฒนาท้องถิ่น
-npm run build  # บิลด์ production
-npm run start  # รันหลัง build
-npm run lint   # ESLint
+npm run dev
+npm run build
+npm run start
+npm run lint
 ```
 
 ## เส้นทาง

@@ -8,12 +8,17 @@ export function isLocale(value: string): value is Locale {
 
 export type TechId =
   | "react"
+  | "nextjs"
   | "typescript"
   | "javascript"
   | "nodejs"
+  | "nestjs"
+  | "express"
   | "php"
   | "laravel"
   | "mysql"
+  | "postgresql"
+  | "prisma"
   | "aws"
   | "liff"
   | "go"
@@ -23,6 +28,7 @@ export type TechId =
   | "linux"
   | "docker"
   | "github-actions"
+  | "jenkins"
   | "postman"
   | "azure"
   | "openai"
@@ -34,6 +40,7 @@ export type ProjectCase = {
   title: string;
   challenge: string;
   solution: string;
+  result: string;
   stack: TechId[];
 };
 
@@ -55,8 +62,10 @@ export type ResumeContent = {
     learning: string;
     projects: string;
     github: string;
+    linkedin: string;
     challenge: string;
     solution: string;
+    result: string;
     stack: string;
     listening: string;
     speaking: string;
@@ -72,6 +81,7 @@ export type ResumeContent = {
     email: string;
     lineId: string;
     github: string;
+    linkedin: string;
     summary: string[];
   };
   jobInterests: string[];
@@ -127,8 +137,10 @@ export const resumeByLocale: Record<Locale, ResumeContent> = {
       learning: "ความสนใจเพิ่มเติม",
       projects: "สถาปัตยกรรมระบบภายในที่คัดสรร",
       github: "GitHub",
-      challenge: "โจทย์ทางเทคนิค",
-      solution: "แนวทางแก้ปัญหา",
+      linkedin: "LinkedIn",
+      challenge: "โจทย์ที่เจอ",
+      solution: "วิธีจัดการ",
+      result: "ผลที่ได้",
       stack: "Tech Stack",
       listening: "ฟัง",
       speaking: "พูด",
@@ -144,62 +156,83 @@ export const resumeByLocale: Record<Locale, ResumeContent> = {
       email: "phongsak.ysd@gmail.com",
       lineId: "phongsak.ysd",
       github: "https://github.com/phongsakk",
+      linkedin: "https://www.linkedin.com/in/พงษ์ศักดิ์-ยอดเสาดี-924b361a5/",
       summary: [
-        "Full Stack / Backend Developer ที่ทำงานสายเทคโนโลยีแบบเต็มเวลาควบคู่กับการเรียนปริญญาวิทยาการคอมพิวเตอร์ที่มหาวิทยาลัยรามคำแหงได้อย่างต่อเนื่อง สะท้อนถึงวินัย การบริหารเวลา และความรับผิดชอบสูงต่อผลงาน",
-        "มีประสบการณ์พัฒนาระบบองค์กรครบวงจร ทั้ง Frontend, Backend และ Cloud โดยใช้ React (TypeScript), Node.js และ AWS เป็นหลัก พร้อมปรับใช้ Go และ Python ตามความเหมาะสมของโจทย์",
-        "พร้อมเติบโตร่วมกับองค์กรในระยะยาว โดยมุ่งเน้นตำแหน่ง Backend เป็นอันดับแรก รองลงมาคือ Full Stack และ System Analyst พร้อมพัฒนาทักษะ DevOps, Data และ AI automation อย่างต่อเนื่อง",
+        "ทำงานสาย Backend และ Full Stack เป็นหลัก โดยโฟกัสการออกแบบ API, pipeline ข้อมูล และระบบบน cloud ที่ทีมใช้จริงทุกวัน",
+        "รับผิดชอบระบบภายในองค์กรเป็นหลัก ตั้งแต่การประมวลผลข้อมูลปริมาณมาก ไปจนถึงเครื่องมือช่วย deploy และจัดการเอกสาร จึงเน้นโจทย์กับผลกระทบมากกว่าการโชว์ UI",
+        "สนใจตำแหน่ง Backend เป็นอันดับแรก รองลงมาคือ Full Stack และ System Analyst เพื่ออยู่กับระบบแกนขององค์กรและช่วยวางโครงสร้างที่ขยายต่อได้ในระยะยาว",
       ],
     },
     jobInterests: ["1. Backend", "2. Full Stack", "3. System Analyst (SA)"],
     skillGroups: [
       {
-        label: "ทักษะหลัก",
-        items: ["react", "typescript", "nodejs", "php", "laravel", "mysql", "aws", "liff"],
+        label: "Backend",
+        items: ["nodejs", "nestjs", "express", "typescript", "go", "php", "laravel", "postgresql", "mysql", "prisma"],
       },
       {
-        label: "ภาษาโปรแกรม",
-        items: ["typescript", "javascript", "go", "python", "php", "sql"],
+        label: "Frontend (รอง)",
+        items: ["react", "nextjs", "liff"],
+      },
+      {
+        label: "Cloud & Runtime",
+        items: ["aws", "firebase", "azure", "docker"],
       },
       {
         label: "เครื่องมือ",
-        items: ["git", "linux", "docker", "github-actions", "cloud", "postman"],
+        items: ["git", "github-actions", "linux", "postman", "sql"],
       },
       {
-        label: "ทักษะเบื้องต้น",
-        items: ["azure", "openai", "powerbi"],
+        label: "ใช้งานเป็นครั้งคราว / กำลังขยาย",
+        items: ["python", "openai", "powerbi", "jenkins"],
       },
     ],
     learning: {
       title: "ความสนใจเพิ่มเติม",
       items: [
-        "DevOps — Docker, GitHub Actions, AWS Cloud, Firebase (ระดับเบื้องต้น / กำลังพัฒนา)",
-        "Power BI / Data (ระดับเบื้องต้น)",
-        "AI Automation (ระดับเบื้องต้น)",
+        "ทำให้ CI/CD และ container workflow เสถียรขึ้น (Docker, GitHub Actions, AWS)",
+        "ใช้ Power BI / data อ่านผลจากระบบที่ดูแล",
+        "ต่อยอด AI automation / RAG ในงานภายในองค์กรอย่างระมัดระวัง",
       ],
     },
     projects: [
       {
         title: "High-Performance Data Pipeline",
         challenge:
-          "ต้องประมวลผลข้อมูลจากฐานข้อมูลภายนอกปริมาณสูงเฉลี่ยวันละประมาณ 1 ล้านรายการ ให้ทันเวลาใช้งานจริง โดยยังคงความถูกต้องของผลคำนวณ และควบคุมโหลดที่ลงฐานข้อมูลปลายทาง",
+          "ต้องดึงข้อมูลจากฐานข้อมูลภายนอกเฉลี่ยราววันละ 1 ล้านรายการ แล้วคำนวณให้ทันใช้งานจริง หากเก็บทุกอย่างลง MySQL ตรงๆ โหลดและเวลาตอบสนองจะพังง่าย",
         solution:
-          "ออกแบบ pipeline การนำเข้า คัดกรอง และคำนวณด้วย PHP / Node.js จากนั้นบันทึกเฉพาะข้อมูลที่จำเป็นลง MySQL และพัฒนาเว็บจัดการผลลัพธ์ด้วย Laravel เพื่อให้ทีมตรวจสอบและติดตามสถานะได้อย่างมั่นคง",
+          "แยกขั้นนำเข้า คัดกรอง และคำนวณด้วย PHP / Node.js เก็บเฉพาะข้อมูลที่ธุรกิจต้องใช้จริงลง MySQL จากนั้นทำหน้าจัดการด้วย Laravel ให้ทีมตรวจสถานะและย้อนดูผลได้",
+        result:
+          "รองรับปริมาณข้อมูลระดับล้านรายการต่อวันได้ต่อเนื่อง และตรวจสอบผลคำนวณย้อนหลังได้โดยไม่ยัดข้อมูลเกินจำเป็นลงฐานข้อมูล",
         stack: ["php", "laravel", "nodejs", "mysql", "sql"],
       },
       {
-        title: "Cloud & DevOps Infrastructure",
+        title: "Cloud Delivery & Internal CLI",
         challenge:
-          "ระบบบริการหลักขององค์กรต้องการการ deploy ที่สม่ำเสมอ ลดขั้นตอนแมนนวล และรองรับการขยายบน AWS โดยทีมต้องเริ่มโปรเจกต์ใหม่ได้เร็วและมาตรฐานเดียวกัน",
+          "ตอนเริ่มโปรเจกต์ใหม่ในทีม มักเสียเวลาไปกับ setup สภาพแวดล้อมที่ไม่เหมือนกัน และการ deploy บน AWS ยังมีขั้นตอนแมนนวลที่ทำให้ส่งมอบช้า",
         solution:
-          "ดูแล workload บน AWS (เช่น EC2, ECS, Lambda) วางแนวทาง CI/CD ด้วย GitHub Actions / Docker และพัฒนา CLI สำหรับ scaffold โปรเจกต์ เพื่อลดเวลา setup และลดความคลาดเคลื่อนของสภาพแวดล้อม",
-        stack: ["aws", "docker", "github-actions", "cloud", "nodejs", "typescript"],
+          "จัดโครงสร้างงานบน AWS (เช่น EC2, ECS, Lambda) วางแนวทาง CI/CD ด้วย GitHub Actions / Docker และพัฒนา CLI สำหรับ scaffold โปรเจกต์ให้ทีมเริ่มงานด้วยมาตรฐานเดียวกัน",
+        result:
+          "ขึ้นโปรเจกต์ใหม่ได้เร็วขึ้นอย่างชัดเจน ลดความต่างของสภาพแวดล้อมในทีม ทำให้ review และ deploy ราบรื่นขึ้น",
+        stack: ["aws", "docker", "github-actions", "nodejs", "typescript"],
       },
       {
-        title: "AI-Powered Internal Tools",
+        title: "Document OCR & Classification",
         challenge:
-          "ทีมต้องการเครื่องมือภายในที่ช่วยค้นหาและถาม–ตอบข้อมูลองค์กรได้เร็วขึ้น โดยเริ่มใช้ AI อย่างระมัดระวังและควบคุมขอบเขตการใช้งาน",
+          "งานเอกสารในองค์กรเดิมยังพึ่งคนอ่านและแยกประเภทมาก ทำให้ช้าและผิดพลาดได้ง่ายเมื่อปริมาณเอกสารสูงขึ้น",
         solution:
-          "ทดลองนำ Azure OpenAI / AI Search และแนวทาง RAG มาใช้กับเครื่องมือภายในองค์กรในระดับเบื้องต้น เพื่อเพิ่มประสิทธิภาพการเข้าถึงข้อมูล โดยไม่เปิดเผยระบบหรือข้อมูลภายนอก",
+          "ออกแบบ/พัฒนา flow จัดการเอกสารด้วย OCR และ classification โดยใช้ Azure Form Recognizer เป็นจุดอ่านข้อมูล จากนั้นส่งต่อไปยัง backend เพื่อจัดเก็บและใช้งานต่อในระบบภายใน",
+        result:
+          "ดึงข้อมูลจากเอกสารเข้าสู่ระบบได้เร็วขึ้น และลดงานมือในขั้นอ่าน–แยกประเภทเอกสาร (รายละเอียดเชิงตัวเลขอยู่ภายใต้ระบบภายใน)",
+        stack: ["azure", "nodejs", "typescript", "python"],
+      },
+      {
+        title: "AI Search for Internal Knowledge",
+        challenge:
+          "ต้องการค้นหาและถาม–ตอบข้อมูลภายในองค์กรได้เร็วขึ้น โดยเริ่มใช้ AI แบบควบคุมขอบเขต ไม่เปิดข้อมูลออกภายนอก",
+        solution:
+          "ทดลองต่อ Azure OpenAI / AI Search และแนวทาง RAG เข้ากับเครื่องมือภายใน เพื่อค้นจากคลังความรู้ขององค์กรโดยไม่ต้องเปิดระบบสาธารณะ",
+        result:
+          "ได้ prototype สำหรับสำรวจความเป็นไปได้ของ AI search ภายในองค์กร และเห็นข้อจำกัดเรื่องคุณภาพคำตอบกับการจัดเตรียมข้อมูลจริง",
         stack: ["azure", "openai", "nodejs", "typescript"],
       },
     ],
@@ -226,9 +259,9 @@ export const resumeByLocale: Record<Locale, ResumeContent> = {
         location: "วังทองหลาง กรุงเทพฯ",
         role: "Full Stack Programmer",
         highlights: [
-          "รับผิดชอบพัฒนาระบบงานหลักด้วย React (TypeScript) + Node.js ครอบคลุม Frontend / Backend / Server ในสภาพแวดล้อมองค์กร",
-          "ดูแลและปรับปรุงโครงสร้าง cloud บน AWS (EC2, ECS, Lambda) เพื่อให้ระบบเสถียรและรองรับการขยายตัว",
-          "พัฒนา CLI สำหรับ scaffold โปรเจกต์ และจัดระเบียบ workflow บน GitHub ช่วยลดเวลาเริ่มงานของทีมและยกระดับมาตรฐานการส่งมอบ",
+          "พัฒนาทั้ง frontend และ backend ด้วย React (TypeScript) + Node.js โดยโฟกัส API, โครงสร้างข้อมูล และความเสถียรของระบบที่ทีมธุรกิจใช้จริง",
+          "ดูแล workload บน AWS (EC2, ECS, Lambda) รวมถึงแนวทาง deploy ที่ทำซ้ำได้",
+          "พัฒนา CLI สำหรับ scaffold โปรเจกต์และปรับ workflow บน GitHub เพื่อลดเวลาเริ่มงานกับความคลาดเคลื่อนของ environment ในทีม",
         ],
       },
       {
@@ -237,8 +270,8 @@ export const resumeByLocale: Record<Locale, ResumeContent> = {
         location: "ดอนเมือง กรุงเทพฯ",
         role: "Front End Programmer (React)",
         highlights: [
-          "พัฒนาเว็บแอปด้วย React + TypeScript สำหรับการใช้งานจริงบน LINE LIFF",
-          "ส่งมอบหน้าจอที่เน้นความเสถียรของ UX ภายใน LINE และเชื่อมต่อกับเงื่อนไขธุรกิจของระบบ",
+          "พัฒนาเว็บบน React + TypeScript ที่ต้องรันใน LINE LIFF จัดการข้อจำกัดของ WebView และการเชื่อมต่อข้อมูลให้ใช้งานจริงได้",
+          "โฟกัส flow การใช้งานจริงใน LINE และจับคู่หน้าจอกับเงื่อนไขธุรกิจมากกว่าการทำ UI สวยอย่างเดียว",
         ],
       },
       {
@@ -247,9 +280,9 @@ export const resumeByLocale: Record<Locale, ResumeContent> = {
         location: "วังทองหลาง กรุงเทพฯ",
         role: "Programmer (PHP / Node.js)",
         highlights: [
-          "ออกแบบและพัฒนาระบบคำนวณที่นำเข้าข้อมูลจากแหล่งภายนอกเฉลี่ยประมาณ 1 ล้านรายการต่อวัน",
-          "คัดกรองและจัดเก็บผลลัพธ์ลง MySQL อย่างมีประสิทธิภาพ พร้อมรองรับการตรวจสอบย้อนหลัง",
-          "พัฒนาเว็บจัดการข้อมูลด้วย PHP Laravel 10 เพื่อสนับสนุนการติดตามและการดำเนินงานของทีมธุรกิจ",
+          "ออกแบบและพัฒนาระบบคำนวณที่ดึงข้อมูลภายนอกเฉลี่ยราว 1 ล้านรายการต่อวัน แล้วคัดกรองก่อนลง MySQL",
+          "แยกขั้นประมวลผลและเก็บเฉพาะผลที่จำเป็น เพื่อรักษาความถูกต้องภายใต้ปริมาณข้อมูลสูง",
+          "พัฒนาเว็บจัดการด้วย Laravel 10 ให้ทีมตรวจสถานะและติดตามผลได้เอง",
         ],
       },
     ],
@@ -258,7 +291,8 @@ export const resumeByLocale: Record<Locale, ResumeContent> = {
         period: "กำลังศึกษา — คาดว่าจบ พ.ศ. 2571",
         school: "มหาวิทยาลัยรามคำแหง",
         degree: "วท.บ. วิทยาการคอมพิวเตอร์",
-        detail: "คณะวิทยาศาสตร์ · เรียนควบคู่การทำงาน Full-time",
+        detail:
+          "คณะวิทยาศาสตร์ · เรียนควบคู่กับงาน full-time อย่างต่อเนื่อง จึงคุ้นกับการจัดลำดับงานและการส่งมอบตามกำหนด",
         gpa: "GPA 2.42",
       },
       {
@@ -280,17 +314,19 @@ export const resumeByLocale: Record<Locale, ResumeContent> = {
       downloadPdf: "Download PDF",
       language: "Language",
       contact: "Contact",
-      about: "Professional Summary",
-      jobInterest: "Roles of Interest",
+      about: "Summary",
+      jobInterest: "Target roles",
       experience: "Work Experience",
       education: "Education",
-      skills: "Technical Skills",
-      languages: "Language Proficiency",
-      learning: "Additional Focus Areas",
+      skills: "Skills",
+      languages: "Languages",
+      learning: "Focus areas",
       projects: "Selected Internal Systems",
       github: "GitHub",
-      challenge: "Technical Challenge",
-      solution: "Solution",
+      linkedin: "LinkedIn",
+      challenge: "The problem",
+      solution: "Approach",
+      result: "Outcome",
       stack: "Tech Stack",
       listening: "Listening",
       speaking: "Speaking",
@@ -306,62 +342,83 @@ export const resumeByLocale: Record<Locale, ResumeContent> = {
       email: "phongsak.ysd@gmail.com",
       lineId: "phongsak.ysd",
       github: "https://github.com/phongsakk",
+      linkedin: "https://www.linkedin.com/in/พงษ์ศักดิ์-ยอดเสาดี-924b361a5/",
       summary: [
-        "Full Stack / Backend Developer who balances full-time technology roles with ongoing Computer Science studies at Ramkhamhaeng University — demonstrating discipline, time management, and strong ownership of delivery.",
-        "Builds end-to-end enterprise systems across frontend, backend, and cloud, primarily with React (TypeScript), Node.js, and AWS, while applying Go and Python when the problem calls for it.",
-        "Seeking long-term growth with an organization, prioritizing Backend roles, followed by Full Stack and System Analyst, while continuously developing DevOps, data, and AI automation skills.",
+        "Focus on Backend and Full Stack work — APIs, data pipelines, and cloud systems used by teams every day.",
+        "Mostly internal enterprise systems: high-volume processing, delivery tooling, and document workflows. Prefer clear problem/impact over polished demos.",
+        "Targeting Backend first, then Full Stack and System Analyst, to own core systems and help shape architectures that can grow with the organization.",
       ],
     },
     jobInterests: ["1. Backend", "2. Full Stack", "3. System Analyst (SA)"],
     skillGroups: [
       {
-        label: "Core",
-        items: ["react", "typescript", "nodejs", "php", "laravel", "mysql", "aws", "liff"],
+        label: "Backend",
+        items: ["nodejs", "nestjs", "express", "typescript", "go", "php", "laravel", "postgresql", "mysql", "prisma"],
       },
       {
-        label: "Programming Languages",
-        items: ["typescript", "javascript", "go", "python", "php", "sql"],
+        label: "Frontend (supporting)",
+        items: ["react", "nextjs", "liff"],
+      },
+      {
+        label: "Cloud & Runtime",
+        items: ["aws", "firebase", "azure", "docker"],
       },
       {
         label: "Tools",
-        items: ["git", "linux", "docker", "github-actions", "cloud", "postman"],
+        items: ["git", "github-actions", "linux", "postman", "sql"],
       },
       {
-        label: "Foundational",
-        items: ["azure", "openai", "powerbi"],
+        label: "Occasional / expanding",
+        items: ["python", "openai", "powerbi", "jenkins"],
       },
     ],
     learning: {
-      title: "Additional Focus Areas",
+      title: "Focus areas",
       items: [
-        "DevOps — Docker, GitHub Actions, AWS Cloud, Firebase (foundational / in progress)",
-        "Power BI / Data (foundational)",
-        "AI Automation (foundational)",
+        "Making CI/CD and container workflows more reliable (Docker, GitHub Actions, AWS)",
+        "Using Power BI / data to read signals from systems under care",
+        "Extending careful internal AI automation / RAG use cases",
       ],
     },
     projects: [
       {
         title: "High-Performance Data Pipeline",
         challenge:
-          "Process approximately 1 million external records per day with reliable computation outcomes, on-time delivery for business use, and controlled write load to the destination database.",
+          "Need to pull roughly 1 million external records per day, compute results in time for business use, and avoid hammering MySQL by writing everything indiscriminately.",
         solution:
-          "Designed an ingestion, filtering, and computation pipeline with PHP / Node.js, persisted only required results to MySQL, and delivered a Laravel-based operations UI for monitoring and verification.",
+          "Split ingestion, filtering, and computation across PHP / Node.js; store only what the business needs in MySQL; build a Laravel ops UI for verification.",
+        result:
+          "Pipeline sustained ~1M records/day, with auditable results and fewer unnecessary database writes.",
         stack: ["php", "laravel", "nodejs", "mysql", "sql"],
       },
       {
-        title: "Cloud & DevOps Infrastructure",
+        title: "Cloud Delivery & Internal CLI",
         challenge:
-          "Core services required consistent releases, fewer manual steps, AWS scalability, and a faster, standardized way for the team to start new projects.",
+          "New projects often started with inconsistent environments, and AWS releases still had too many manual steps that slowed delivery.",
         solution:
-          "Supported AWS workloads (EC2, ECS, Lambda), established CI/CD practices with GitHub Actions / Docker, and built an internal scaffolding CLI to reduce setup time and environment drift.",
-        stack: ["aws", "docker", "github-actions", "cloud", "nodejs", "typescript"],
+          "Organize AWS workloads (EC2, ECS, Lambda), introduce repeatable CI/CD with GitHub Actions / Docker, and build a scaffolding CLI for consistent project bootstrapping.",
+        result:
+          "Faster project kickoff, less environment drift, and smoother reviews/deploys across the team.",
+        stack: ["aws", "docker", "github-actions", "nodejs", "typescript"],
       },
       {
-        title: "AI-Powered Internal Tools",
+        title: "Document OCR & Classification",
         challenge:
-          "The organization needed internal tools to speed up enterprise information lookup and Q&A, while introducing AI carefully within controlled boundaries.",
+          "Document-heavy workflows still depended on people reading and sorting files, which slowed down as volume grew and raised error risk.",
         solution:
-          "Applied Azure OpenAI / AI Search and RAG patterns at a foundational level to internal tools, improving information access without exposing proprietary systems externally.",
+          "Design/build an OCR + classification flow with Azure Form Recognizer for extraction, then hand structured data to internal backend services for storage and downstream use.",
+        result:
+          "Faster intake of document data into systems and less manual read/sort effort (exact percentages remain internal).",
+        stack: ["azure", "nodejs", "typescript", "python"],
+      },
+      {
+        title: "AI Search for Internal Knowledge",
+        challenge:
+          "Need faster internal Q&A over company knowledge, with AI introduced under controlled scope — no public exposure of proprietary data.",
+        solution:
+          "Prototype Azure OpenAI / AI Search with a RAG-style approach on internal tools for safe querying of organizational knowledge.",
+        result:
+          "Usable internal prototype, plus clearer insight into answer quality versus data-prep requirements before wider adoption.",
         stack: ["azure", "openai", "nodejs", "typescript"],
       },
     ],
@@ -388,9 +445,9 @@ export const resumeByLocale: Record<Locale, ResumeContent> = {
         location: "Wang Thonglang, Bangkok",
         role: "Full Stack Programmer",
         highlights: [
-          "Own core product development with React (TypeScript) + Node.js across frontend, backend, and server layers in an enterprise setting",
-          "Maintain and improve AWS infrastructure (EC2, ECS, Lambda) for stable operations and growth readiness",
-          "Built an internal project-scaffolding CLI and strengthened GitHub workflows, cutting team ramp-up time and raising delivery consistency",
+          "Build and maintain product work with React (TypeScript) + Node.js, with focus on APIs, data flow, and reliability for systems the business uses daily",
+          "Run AWS workloads (EC2, ECS, Lambda) and keep release paths repeatable for the team",
+          "Build a project-scaffolding CLI and tighten GitHub workflows to cut kickoff time and reduce environment mismatches",
         ],
       },
       {
@@ -399,8 +456,8 @@ export const resumeByLocale: Record<Locale, ResumeContent> = {
         location: "Don Mueang, Bangkok",
         role: "Front End Programmer (React)",
         highlights: [
-          "Delivered React + TypeScript web apps for production use on LINE LIFF",
-          "Focused on reliable in-LINE UX and integration with business workflow requirements",
+          "Ship React + TypeScript apps on LINE LIFF, working around WebView constraints and real integration requirements",
+          "Focus on actual in-LINE user flows and business rules more than cosmetic UI polish",
         ],
       },
       {
@@ -409,9 +466,9 @@ export const resumeByLocale: Record<Locale, ResumeContent> = {
         location: "Wang Thonglang, Bangkok",
         role: "Programmer (PHP / Node.js)",
         highlights: [
-          "Designed and built computation systems ingesting ~1M external records per day",
-          "Filtered and stored outcomes efficiently in MySQL with traceability for later review",
-          "Developed data operations websites with PHP Laravel 10 to support business monitoring",
+          "Design and build computation systems that ingest ~1M external records per day, filtering before MySQL writes",
+          "Separate processing stages and persist only required outcomes to balance volume with correctness",
+          "Build Laravel 10 ops pages so the team can monitor and review results",
         ],
       },
     ],
@@ -420,7 +477,8 @@ export const resumeByLocale: Record<Locale, ResumeContent> = {
         period: "In progress — expected 2028",
         school: "Ramkhamhaeng University",
         degree: "B.Sc. Computer Science",
-        detail: "Faculty of Science · Studying while working full-time",
+        detail:
+          "Faculty of Science · Studying while working full-time; comfortable prioritizing and shipping on schedule",
         gpa: "GPA 2.42",
       },
       {

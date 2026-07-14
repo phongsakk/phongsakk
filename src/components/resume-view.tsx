@@ -97,6 +97,16 @@ export function ResumeView({ locale, content }: ResumeViewProps) {
                   {ui.github}
                 </a>
               </li>
+              <li>
+                <a
+                  className="underline-offset-2 hover:underline"
+                  href={profile.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {ui.linkedin}
+                </a>
+              </li>
             </ul>
           </div>
         </section>
@@ -205,6 +215,12 @@ export function ResumeView({ locale, content }: ResumeViewProps) {
                       {ui.solution}
                     </p>
                     <p className="text-[var(--ink)]">{project.solution}</p>
+                  </div>
+                  <div>
+                    <p className="mb-1 text-xs font-semibold uppercase tracking-[0.14em] text-[var(--accent)]">
+                      {ui.result}
+                    </p>
+                    <p className="text-[var(--ink)]">{project.result}</p>
                   </div>
                   <div>
                     <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-[var(--accent)]">
