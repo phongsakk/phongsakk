@@ -150,32 +150,72 @@ export function ResumeView({ locale, content }: ResumeViewProps) {
               </div>
             ))}
           </div>
-
-          <h2 className="mb-3 mt-8 text-sm font-semibold uppercase tracking-[0.16em] text-[var(--accent)]">
-            {ui.languages}
-          </h2>
-          <ul className="space-y-2 text-sm leading-relaxed sm:text-base">
-            {languages.map((lang) => (
-              <li key={lang.name}>
-                <span className="font-semibold">{lang.name}</span>
-                <span className="text-[var(--ink-muted)]">
-                  {" "}
-                  — {lang.speaking} / {lang.reading} / {lang.writing}
-                </span>
-              </li>
-            ))}
-          </ul>
         </section>
 
         <section className="print-break-avoid mt-8 border-b border-[var(--line)] pb-8">
-          <h2 className="mb-4 text-sm font-semibold uppercase tracking-[0.16em] text-[var(--accent)]">
+          <h2 className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-[var(--accent)]">
+            {ui.languages}
+          </h2>
+          <div className="overflow-x-auto">
+            <table className="w-full min-w-[28rem] border-collapse text-left text-sm sm:text-base">
+              <thead>
+                <tr className="border-b border-[var(--line)] text-[var(--ink-muted)]">
+                  <th className="py-2 pr-3 font-semibold">{ui.languageName}</th>
+                  <th className="py-2 px-2 font-semibold">{ui.listening}</th>
+                  <th className="py-2 px-2 font-semibold">{ui.speaking}</th>
+                  <th className="py-2 px-2 font-semibold">{ui.reading}</th>
+                  <th className="py-2 pl-2 font-semibold">{ui.writing}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {languages.map((lang) => (
+                  <tr key={lang.name} className="border-b border-[var(--line)]/70">
+                    <td className="py-2.5 pr-3 font-semibold text-[var(--ink)]">{lang.name}</td>
+                    <td className="py-2.5 px-2 text-[var(--ink-muted)]">{lang.listening}</td>
+                    <td className="py-2.5 px-2 text-[var(--ink-muted)]">{lang.speaking}</td>
+                    <td className="py-2.5 px-2 text-[var(--ink-muted)]">{lang.reading}</td>
+                    <td className="py-2.5 pl-2 text-[var(--ink-muted)]">{lang.writing}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section className="print-break-avoid mt-8 border-b border-[var(--line)] pb-8">
+          <h2 className="mb-5 text-sm font-semibold uppercase tracking-[0.16em] text-[var(--accent)]">
             {ui.projects}
           </h2>
-          <ul className="list-disc space-y-2 pl-5 text-[0.98rem] leading-relaxed text-[var(--ink)]">
-            {projects.map((item) => (
-              <li key={item}>{item}</li>
+          <div className="space-y-7">
+            {projects.map((project) => (
+              <article
+                key={project.title}
+                className="print-break-avoid border-l-2 border-[var(--accent)] pl-4"
+              >
+                <h3 className="text-lg font-semibold text-[var(--ink)]">{project.title}</h3>
+                <div className="mt-3 space-y-3 text-[0.98rem] leading-relaxed">
+                  <div>
+                    <p className="mb-1 text-xs font-semibold uppercase tracking-[0.14em] text-[var(--accent)]">
+                      {ui.challenge}
+                    </p>
+                    <p className="text-[var(--ink)]">{project.challenge}</p>
+                  </div>
+                  <div>
+                    <p className="mb-1 text-xs font-semibold uppercase tracking-[0.14em] text-[var(--accent)]">
+                      {ui.solution}
+                    </p>
+                    <p className="text-[var(--ink)]">{project.solution}</p>
+                  </div>
+                  <div>
+                    <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-[var(--accent)]">
+                      {ui.stack}
+                    </p>
+                    <TechBadgeList items={project.stack} />
+                  </div>
+                </div>
+              </article>
             ))}
-          </ul>
+          </div>
         </section>
 
         <section className="print-break-avoid mt-8 border-b border-[var(--line)] pb-8">
