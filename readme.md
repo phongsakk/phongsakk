@@ -17,7 +17,14 @@
 | [profile.md](profile.md) | สรุปรายละเอียดโปรไฟล์ / ประวัติ / ทักษะที่แสดงบนเว็บ |
 | [system.md](system.md) | สรุปเทคโนโลยีที่ใช้สร้างเว็บ และการเปลี่ยนภาษา UI |
 
-## เริ่มใช้งาน
+## Live site
+
+Production: [https://phongsakk-portfolio.vercel.app](https://phongsakk-portfolio.vercel.app)
+
+- [/th](https://phongsakk-portfolio.vercel.app/th) — ไทย
+- [/en](https://phongsakk-portfolio.vercel.app/en) — English
+
+## เริ่มใช้งาน (local)
 
 ```bash
 npm install
