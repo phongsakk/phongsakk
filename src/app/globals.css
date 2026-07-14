@@ -88,7 +88,7 @@ a {
 @media print {
   @page {
     size: A4;
-    margin: 12mm;
+    margin: 10mm 12mm;
   }
 
   html,
@@ -98,6 +98,8 @@ a {
     color: #111 !important;
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
+    font-size: 10pt;
+    line-height: 1.35;
   }
 
   body::before {
@@ -118,9 +120,72 @@ a {
     max-width: none !important;
   }
 
+  /* Keep a block together; never split mid-card */
   .print-break-avoid {
     break-inside: avoid;
     page-break-inside: avoid;
+  }
+
+  /* Keep heading with the content that follows */
+  .print-keep-with-next {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  /* Large sections may span pages; items inside use print-break-avoid */
+  .print-section {
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+
+  .print-section > h2.print-keep-with-next {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  h1,
+  h2,
+  h3 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  p,
+  li {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* Compact spacing for A4 */
+  .print-surface header,
+  .print-surface section {
+    margin-top: 0.55rem !important;
+    padding-bottom: 0.45rem !important;
+  }
+
+  .print-surface h1 {
+    font-size: 22pt !important;
+  }
+
+  .print-surface h2 {
+    font-size: 9pt !important;
+    margin-bottom: 0.35rem !important;
+  }
+
+  .print-surface h3 {
+    font-size: 11pt !important;
+  }
+
+  .print-surface .space-y-7 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 0.55rem !important;
+  }
+
+  .print-surface .space-y-5 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 0.4rem !important;
+  }
+
+  .print-surface .space-y-3 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 0.3rem !important;
   }
 
   a {
@@ -130,5 +195,7 @@ a {
   .tech-badge-print {
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
+    font-size: 7.5pt !important;
+    padding: 0.1rem 0.35rem !important;
   }
 }

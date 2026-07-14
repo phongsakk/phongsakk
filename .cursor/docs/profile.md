@@ -30,9 +30,10 @@ LinkedIn: [พงษ์ศักดิ์ ยอดเสาดี](https://www.
 ## ประสบการณ์การทำงาน
 
 ### Full Stack Programmer — Think Bit Co., Ltd. (เม.ย. 2567 — ปัจจุบัน)
-- พัฒนาทั้ง frontend และ backend ด้วย React (TypeScript) + Node.js โดยโฟกัส API, โครงสร้างข้อมูล และความเสถียรของระบบที่ทีมธุรกิจใช้จริง
-- ดูแล workload บน AWS (EC2, ECS, Lambda) และแนวทาง deploy ที่ทำซ้ำได้
-- พัฒนา CLI สำหรับ scaffold โปรเจกต์ และปรับ workflow บน GitHub เพื่อลดเวลาเริ่มงานกับความคลาดเคลื่อนของ environment
+- พัฒนา backend ด้วย NestJS เป็น API gateway รับโหลดแล้วจ่ายงานต่อไปยัง API ย่อยในระบบสำนักงาน และใช้ React (TypeScript) + Node.js ตามที่ระบบต้องการ
+- ใช้ Prisma เป็นชั้นเข้าถึงฐานข้อมูลหลักกับ MySQL, PostgreSQL และ SQL Server
+- บำรุงรักษาและต่อยอดโค้ด Go จากระบบ legacy ที่องค์กรใช้อยู่ต่อเนื่อง
+- ดูแล workload บน AWS (EC2, ECS, Lambda) และพัฒนา CLI สำหรับ scaffold โปรเจกต์ + ปรับ workflow บน GitHub
 
 ### Front End Programmer (React) — Real Factory (ก.พ. — เม.ย. 2567)
 - พัฒนาเว็บบน React + TypeScript สำหรับ LINE LIFF จัดการข้อจำกัดของ WebView และการเชื่อมต่อข้อมูลให้ใช้งานจริงได้
@@ -45,20 +46,18 @@ LinkedIn: [พงษ์ศักดิ์ ยอดเสาดี](https://www.
 
 ## ทักษะ
 
-- **Backend:** Node.js, NestJS, Express, TypeScript, Go, PHP, Laravel, PostgreSQL, MySQL, Prisma  
-- **Frontend (รอง):** React, Next.js, LINE LIFF  
-- **Cloud & Runtime:** AWS, Firebase, Azure, Docker  
-- **เครื่องมือ:** Git, GitHub Actions, Linux, Postman, SQL  
-- **ใช้งานเป็นครั้งคราว / กำลังขยาย:** Python, OpenAI/RAG, Power BI, Jenkins  
+- **หลัก:** Node.js, TypeScript, Express, AWS, Docker, React  
+- **รอง:** NestJS, Go, PHP, Laravel, PostgreSQL, MySQL, Prisma, Next.js, LINE LIFF, Firebase, Azure, Git, GitHub Actions, Linux, Postman, SQL, Python, OpenAI/RAG, Power BI, Jenkins  
 
 ## สถาปัตยกรรมระบบภายในที่คัดสรร
 
-1. High-Performance Data Pipeline  
-2. Cloud Delivery & Internal CLI  
-3. Document OCR & Classification  
-4. AI Search for Internal Knowledge  
+1. High-Performance Data Pipeline (~1 ล้านรายการ/วัน)  
+2. NestJS API Gateway (ระบบสำนักงาน) + Prisma หลายชนิด DB  
+3. Cloud Delivery, CLI & Legacy Go  
+4. Document OCR & Classification  
 
-รายละเอียดโจทย์ / วิธีจัดการ / ผล ดูบนเว็บ
+รายละเอียดโจทย์ / วิธีจัดการ / ผล ดูบนเว็บ  
+*(ตัด AI Search prototype ออกจากหน้าหลัก เพื่อโฟกัสเคส production / backend)*
 
 ## ประวัติการศึกษา
 

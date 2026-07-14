@@ -58,7 +58,7 @@ export function ResumeView({ locale, content }: ResumeViewProps) {
 
         <section className="print-break-avoid mt-8 grid gap-6 border-b border-[var(--line)] pb-8 sm:grid-cols-[1.4fr_1fr]">
           <div>
-            <h2 className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-[var(--accent)]">
+            <h2 className="print-keep-with-next mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-[var(--accent)]">
               {ui.about}
             </h2>
             <div className="space-y-3 text-base leading-relaxed text-[var(--ink)] sm:text-[1.05rem]">
@@ -112,7 +112,7 @@ export function ResumeView({ locale, content }: ResumeViewProps) {
         </section>
 
         <section className="print-break-avoid mt-8 border-b border-[var(--line)] pb-8">
-          <h2 className="mb-4 text-sm font-semibold uppercase tracking-[0.16em] text-[var(--accent)]">
+          <h2 className="print-keep-with-next mb-4 text-sm font-semibold uppercase tracking-[0.16em] text-[var(--accent)]">
             {ui.jobInterest}
           </h2>
           <ol className="flex flex-wrap gap-x-8 gap-y-2 text-base font-medium text-[var(--ink)]">
@@ -122,15 +122,17 @@ export function ResumeView({ locale, content }: ResumeViewProps) {
           </ol>
         </section>
 
-        <section className="mt-8 border-b border-[var(--line)] pb-8">
-          <h2 className="mb-5 text-sm font-semibold uppercase tracking-[0.16em] text-[var(--accent)]">
+        <section className="print-section mt-8 border-b border-[var(--line)] pb-8">
+          <h2 className="print-keep-with-next mb-5 text-sm font-semibold uppercase tracking-[0.16em] text-[var(--accent)]">
             {ui.experience}
           </h2>
           <div className="space-y-7">
             {experience.map((job) => (
               <article key={`${job.company}-${job.period}`} className="print-break-avoid">
                 <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-                  <h3 className="text-lg font-semibold text-[var(--ink)]">{job.role}</h3>
+                  <h3 className="print-keep-with-next text-lg font-semibold text-[var(--ink)]">
+                    {job.role}
+                  </h3>
                   <p className="shrink-0 text-sm text-[var(--ink-muted)]">{job.period}</p>
                 </div>
                 <p className="mt-1 text-[var(--ink-muted)]">
@@ -146,13 +148,13 @@ export function ResumeView({ locale, content }: ResumeViewProps) {
           </div>
         </section>
 
-        <section className="print-break-avoid mt-8 border-b border-[var(--line)] pb-8">
-          <h2 className="mb-5 text-sm font-semibold uppercase tracking-[0.16em] text-[var(--accent)]">
+        <section className="print-section mt-8 border-b border-[var(--line)] pb-8">
+          <h2 className="print-keep-with-next mb-5 text-sm font-semibold uppercase tracking-[0.16em] text-[var(--accent)]">
             {ui.skills}
           </h2>
           <div className="space-y-5">
             {skillGroups.map((group) => (
-              <div key={group.label}>
+              <div key={group.label} className="print-break-avoid">
                 <p className="mb-2.5 text-sm font-semibold text-[var(--ink-muted)]">
                   {group.label}
                 </p>
@@ -163,7 +165,7 @@ export function ResumeView({ locale, content }: ResumeViewProps) {
         </section>
 
         <section className="print-break-avoid mt-8 border-b border-[var(--line)] pb-8">
-          <h2 className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-[var(--accent)]">
+          <h2 className="print-keep-with-next mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-[var(--accent)]">
             {ui.languages}
           </h2>
           <div className="overflow-x-auto">
@@ -192,8 +194,8 @@ export function ResumeView({ locale, content }: ResumeViewProps) {
           </div>
         </section>
 
-        <section className="print-break-avoid mt-8 border-b border-[var(--line)] pb-8">
-          <h2 className="mb-5 text-sm font-semibold uppercase tracking-[0.16em] text-[var(--accent)]">
+        <section className="print-section mt-8 border-b border-[var(--line)] pb-8">
+          <h2 className="print-keep-with-next mb-5 text-sm font-semibold uppercase tracking-[0.16em] text-[var(--accent)]">
             {ui.projects}
           </h2>
           <div className="space-y-7">
@@ -202,7 +204,9 @@ export function ResumeView({ locale, content }: ResumeViewProps) {
                 key={project.title}
                 className="print-break-avoid border-l-2 border-[var(--accent)] pl-4"
               >
-                <h3 className="text-lg font-semibold text-[var(--ink)]">{project.title}</h3>
+                <h3 className="print-keep-with-next text-lg font-semibold text-[var(--ink)]">
+                  {project.title}
+                </h3>
                 <div className="mt-3 space-y-3 text-[0.98rem] leading-relaxed">
                   <div>
                     <p className="mb-1 text-xs font-semibold uppercase tracking-[0.14em] text-[var(--accent)]">
@@ -235,7 +239,7 @@ export function ResumeView({ locale, content }: ResumeViewProps) {
         </section>
 
         <section className="print-break-avoid mt-8 border-b border-[var(--line)] pb-8">
-          <h2 className="mb-4 text-sm font-semibold uppercase tracking-[0.16em] text-[var(--accent)]">
+          <h2 className="print-keep-with-next mb-4 text-sm font-semibold uppercase tracking-[0.16em] text-[var(--accent)]">
             {learning.title}
           </h2>
           <ul className="space-y-2 text-[0.98rem] leading-relaxed text-[var(--ink)]">
@@ -247,15 +251,15 @@ export function ResumeView({ locale, content }: ResumeViewProps) {
           </ul>
         </section>
 
-        <section className="print-break-avoid mt-8">
-          <h2 className="mb-5 text-sm font-semibold uppercase tracking-[0.16em] text-[var(--accent)]">
+        <section className="print-section mt-8">
+          <h2 className="print-keep-with-next mb-5 text-sm font-semibold uppercase tracking-[0.16em] text-[var(--accent)]">
             {ui.education}
           </h2>
           <div className="space-y-5">
             {education.map((edu) => (
-              <article key={`${edu.school}-${edu.period}`}>
+              <article key={`${edu.school}-${edu.period}`} className="print-break-avoid">
                 <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-                  <h3 className="text-lg font-semibold">{edu.degree}</h3>
+                  <h3 className="print-keep-with-next text-lg font-semibold">{edu.degree}</h3>
                   <p className="text-sm text-[var(--ink-muted)]">{edu.period}</p>
                 </div>
                 <p className="mt-1 text-[var(--ink-muted)]">

@@ -166,24 +166,33 @@ export const resumeByLocale: Record<Locale, ResumeContent> = {
     jobInterests: ["1. Backend", "2. Full Stack", "3. System Analyst (SA)"],
     skillGroups: [
       {
-        label: "Backend",
-        items: ["nodejs", "nestjs", "express", "typescript", "go", "php", "laravel", "postgresql", "mysql", "prisma"],
+        label: "หลัก",
+        items: ["nodejs", "typescript", "express", "aws", "docker", "react"],
       },
       {
-        label: "Frontend (รอง)",
-        items: ["react", "nextjs", "liff"],
-      },
-      {
-        label: "Cloud & Runtime",
-        items: ["aws", "firebase", "azure", "docker"],
-      },
-      {
-        label: "เครื่องมือ",
-        items: ["git", "github-actions", "linux", "postman", "sql"],
-      },
-      {
-        label: "ใช้งานเป็นครั้งคราว / กำลังขยาย",
-        items: ["python", "openai", "powerbi", "jenkins"],
+        label: "รอง",
+        items: [
+          "nestjs",
+          "go",
+          "php",
+          "laravel",
+          "postgresql",
+          "mysql",
+          "prisma",
+          "nextjs",
+          "liff",
+          "firebase",
+          "azure",
+          "git",
+          "github-actions",
+          "linux",
+          "postman",
+          "sql",
+          "python",
+          "openai",
+          "powerbi",
+          "jenkins",
+        ],
       },
     ],
     learning: {
@@ -200,40 +209,40 @@ export const resumeByLocale: Record<Locale, ResumeContent> = {
         challenge:
           "ต้องดึงข้อมูลจากฐานข้อมูลภายนอกเฉลี่ยราววันละ 1 ล้านรายการ แล้วคำนวณให้ทันใช้งานจริง หากเก็บทุกอย่างลง MySQL ตรงๆ โหลดและเวลาตอบสนองจะพังง่าย",
         solution:
-          "แยกขั้นนำเข้า คัดกรอง และคำนวณด้วย PHP / Node.js เก็บเฉพาะข้อมูลที่ธุรกิจต้องใช้จริงลง MySQL จากนั้นทำหน้าจัดการด้วย Laravel ให้ทีมตรวจสถานะและย้อนดูผลได้",
+          "แยกขั้นนำเข้า คัดกรอง และคำนวณด้วย PHP / Node.js เก็บเฉพาะผลที่ธุรกิจต้องใช้จริงลง MySQL และทำหน้าจัดการด้วย Laravel ให้ตรวจสถานะย้อนหลังได้",
         result:
-          "รองรับปริมาณข้อมูลระดับล้านรายการต่อวันได้ต่อเนื่อง และตรวจสอบผลคำนวณย้อนหลังได้โดยไม่ยัดข้อมูลเกินจำเป็นลงฐานข้อมูล",
-        stack: ["php", "laravel", "nodejs", "mysql", "sql"],
+          "รองรับปริมาณระดับล้านรายการต่อวันได้ต่อเนื่อง โดยไม่ยัดข้อมูลเกินจำเป็นลงฐานข้อมูล",
+        stack: ["php", "laravel", "nodejs", "mysql", "prisma", "sql"],
       },
       {
-        title: "Cloud Delivery & Internal CLI",
+        title: "NestJS API Gateway (Office Systems)",
         challenge:
-          "ตอนเริ่มโปรเจกต์ใหม่ในทีม มักเสียเวลาไปกับ setup สภาพแวดล้อมที่ไม่เหมือนกัน และการ deploy บน AWS ยังมีขั้นตอนแมนนวลที่ทำให้ส่งมอบช้า",
+          "ระบบสำนักงานมี API ย่อยหลายชุด การให้ client เรียตรงจะกระจายโหลดยากและควบคุม entry point ไม่ได้",
         solution:
-          "จัดโครงสร้างงานบน AWS (เช่น EC2, ECS, Lambda) วางแนวทาง CI/CD ด้วย GitHub Actions / Docker และพัฒนา CLI สำหรับ scaffold โปรเจกต์ให้ทีมเริ่มงานด้วยมาตรฐานเดียวกัน",
+          "สร้าง NestJS เป็น API gateway รับโหลดจากภายนอก แล้วจ่ายงานต่อไปยัง API ย่อยภายใน ใช้ Prisma เป็นชั้นเข้าถึง MySQL / PostgreSQL / SQL Server ตามบริการที่เกี่ยวข้อง",
         result:
-          "ขึ้นโปรเจกต์ใหม่ได้เร็วขึ้นอย่างชัดเจน ลดความต่างของสภาพแวดล้อมในทีม ทำให้ review และ deploy ราบรื่นขึ้น",
-        stack: ["aws", "docker", "github-actions", "nodejs", "typescript"],
+          "รวมทางเข้าของระบบสำนักงานไว้จุดเดียว กระจายงานไป API ย่อยได้ชัดเจน และจัดการเข้าถึงฐานข้อมูลหลายชนิดผ่านมาตรฐานเดียวกัน",
+        stack: ["nestjs", "nodejs", "typescript", "prisma", "postgresql", "mysql"],
+      },
+      {
+        title: "Cloud Delivery, CLI & Legacy Go",
+        challenge:
+          "เริ่มโปรเจกต์ใหม่ในทีมเสียเวลา setup สภาพแวดล้อมไม่ตรงกัน มีขั้นตอน deploy บน AWS แบบแมนนวล และต้องบำรุงรักษาโค้ด Go จากระบบ legacy พร้อมกัน",
+        solution:
+          "จัด workload บน AWS (EC2, ECS, Lambda) วาง CI/CD ด้วย GitHub Actions / Docker พัฒนา CLI สำหรับ scaffold โปรเจกต์ และต่อยอดบริการ Go ที่องค์กรใช้อยู่",
+        result:
+          "ขึ้นโปรเจกต์ใหม่ได้เร็วขึ้น ลดความต่างของ environment และดูแลระบบ legacy บน Go ได้อย่างต่อเนื่องควบคู่ของใหม่",
+        stack: ["aws", "docker", "github-actions", "go", "nodejs", "typescript"],
       },
       {
         title: "Document OCR & Classification",
         challenge:
-          "งานเอกสารในองค์กรเดิมยังพึ่งคนอ่านและแยกประเภทมาก ทำให้ช้าและผิดพลาดได้ง่ายเมื่อปริมาณเอกสารสูงขึ้น",
+          "งานเอกสารพึ่งคนอ่านและแยกประเภท ทำให้ช้าและผิดพลาดง่ายเมื่อปริมาณสูงขึ้น",
         solution:
-          "ออกแบบ/พัฒนา flow จัดการเอกสารด้วย OCR และ classification โดยใช้ Azure Form Recognizer เป็นจุดอ่านข้อมูล จากนั้นส่งต่อไปยัง backend เพื่อจัดเก็บและใช้งานต่อในระบบภายใน",
+          "ออกแบบ flow OCR + classification ด้วย Azure Form Recognizer แล้วส่งข้อมูลที่ได้ไป backend เพื่อจัดเก็บและใช้งานต่อในระบบภายใน",
         result:
-          "ดึงข้อมูลจากเอกสารเข้าสู่ระบบได้เร็วขึ้น และลดงานมือในขั้นอ่าน–แยกประเภทเอกสาร (รายละเอียดเชิงตัวเลขอยู่ภายใต้ระบบภายใน)",
-        stack: ["azure", "nodejs", "typescript", "python"],
-      },
-      {
-        title: "AI Search for Internal Knowledge",
-        challenge:
-          "ต้องการค้นหาและถาม–ตอบข้อมูลภายในองค์กรได้เร็วขึ้น โดยเริ่มใช้ AI แบบควบคุมขอบเขต ไม่เปิดข้อมูลออกภายนอก",
-        solution:
-          "ทดลองต่อ Azure OpenAI / AI Search และแนวทาง RAG เข้ากับเครื่องมือภายใน เพื่อค้นจากคลังความรู้ขององค์กรโดยไม่ต้องเปิดระบบสาธารณะ",
-        result:
-          "ได้ prototype สำหรับสำรวจความเป็นไปได้ของ AI search ภายในองค์กร และเห็นข้อจำกัดเรื่องคุณภาพคำตอบกับการจัดเตรียมข้อมูลจริง",
-        stack: ["azure", "openai", "nodejs", "typescript"],
+          "ดึงข้อมูลจากเอกสารเข้าสู่ระบบได้เร็วขึ้น และลดงานมือในขั้นอ่าน–แยกประเภท (รายละเอียดเชิงตัวเลขอยู่ภายใต้ระบบภายใน)",
+        stack: ["azure", "nodejs", "typescript", "python", "prisma"],
       },
     ],
     languages: [
@@ -259,9 +268,10 @@ export const resumeByLocale: Record<Locale, ResumeContent> = {
         location: "วังทองหลาง กรุงเทพฯ",
         role: "Full Stack Programmer",
         highlights: [
-          "พัฒนาทั้ง frontend และ backend ด้วย React (TypeScript) + Node.js โดยโฟกัส API, โครงสร้างข้อมูล และความเสถียรของระบบที่ทีมธุรกิจใช้จริง",
-          "ดูแล workload บน AWS (EC2, ECS, Lambda) รวมถึงแนวทาง deploy ที่ทำซ้ำได้",
-          "พัฒนา CLI สำหรับ scaffold โปรเจกต์และปรับ workflow บน GitHub เพื่อลดเวลาเริ่มงานกับความคลาดเคลื่อนของ environment ในทีม",
+          "พัฒนา backend ด้วย NestJS เป็น API gateway รับโหลดแล้วจ่ายงานต่อไปยัง API ย่อยในระบบสำนักงาน และใช้ React (TypeScript) + Node.js ด้าน frontend/service ที่เกี่ยวข้อง",
+          "ใช้ Prisma เป็นชั้นเข้าถึงฐานข้อมูลหลักในการทำงานกับ MySQL, PostgreSQL และ SQL Server",
+          "บำรุงรักษาและต่อยอดโค้ด Go จากระบบ legacy ที่องค์กรใช้อยู่ต่อเนื่อง",
+          "ดูแล workload บน AWS (EC2, ECS, Lambda) และพัฒนา CLI สำหรับ scaffold โปรเจกต์ + ปรับ workflow บน GitHub เพื่อลดเวลาเริ่มงานและความคลาดเคลื่อนของ environment",
         ],
       },
       {
@@ -352,24 +362,33 @@ export const resumeByLocale: Record<Locale, ResumeContent> = {
     jobInterests: ["1. Backend", "2. Full Stack", "3. System Analyst (SA)"],
     skillGroups: [
       {
-        label: "Backend",
-        items: ["nodejs", "nestjs", "express", "typescript", "go", "php", "laravel", "postgresql", "mysql", "prisma"],
+        label: "Primary",
+        items: ["nodejs", "typescript", "express", "aws", "docker", "react"],
       },
       {
-        label: "Frontend (supporting)",
-        items: ["react", "nextjs", "liff"],
-      },
-      {
-        label: "Cloud & Runtime",
-        items: ["aws", "firebase", "azure", "docker"],
-      },
-      {
-        label: "Tools",
-        items: ["git", "github-actions", "linux", "postman", "sql"],
-      },
-      {
-        label: "Occasional / expanding",
-        items: ["python", "openai", "powerbi", "jenkins"],
+        label: "Supporting",
+        items: [
+          "nestjs",
+          "go",
+          "php",
+          "laravel",
+          "postgresql",
+          "mysql",
+          "prisma",
+          "nextjs",
+          "liff",
+          "firebase",
+          "azure",
+          "git",
+          "github-actions",
+          "linux",
+          "postman",
+          "sql",
+          "python",
+          "openai",
+          "powerbi",
+          "jenkins",
+        ],
       },
     ],
     learning: {
@@ -384,42 +403,42 @@ export const resumeByLocale: Record<Locale, ResumeContent> = {
       {
         title: "High-Performance Data Pipeline",
         challenge:
-          "Need to pull roughly 1 million external records per day, compute results in time for business use, and avoid hammering MySQL by writing everything indiscriminately.",
+          "Need to pull roughly 1 million external records per day, compute results in time for business use, and avoid hammering MySQL with indiscriminate writes.",
         solution:
-          "Split ingestion, filtering, and computation across PHP / Node.js; store only what the business needs in MySQL; build a Laravel ops UI for verification.",
+          "Split ingestion, filtering, and computation across PHP / Node.js; persist only required outcomes to MySQL; provide a Laravel ops UI for status checks.",
         result:
-          "Pipeline sustained ~1M records/day, with auditable results and fewer unnecessary database writes.",
-        stack: ["php", "laravel", "nodejs", "mysql", "sql"],
+          "Sustained ~1M records/day with auditable results and fewer unnecessary database writes.",
+        stack: ["php", "laravel", "nodejs", "mysql", "prisma", "sql"],
       },
       {
-        title: "Cloud Delivery & Internal CLI",
+        title: "NestJS API Gateway (Office Systems)",
         challenge:
-          "New projects often started with inconsistent environments, and AWS releases still had too many manual steps that slowed delivery.",
+          "Office systems expose many micro APIs; calling them directly makes load distribution and entry-point control difficult.",
         solution:
-          "Organize AWS workloads (EC2, ECS, Lambda), introduce repeatable CI/CD with GitHub Actions / Docker, and build a scaffolding CLI for consistent project bootstrapping.",
+          "Build a NestJS API gateway to accept incoming load and route work to internal micro APIs; use Prisma against MySQL / PostgreSQL / SQL Server as needed per service.",
         result:
-          "Faster project kickoff, less environment drift, and smoother reviews/deploys across the team.",
-        stack: ["aws", "docker", "github-actions", "nodejs", "typescript"],
+          "Single entry point for office traffic, clearer routing to downstream APIs, and consistent multi-database access through Prisma.",
+        stack: ["nestjs", "nodejs", "typescript", "prisma", "postgresql", "mysql"],
+      },
+      {
+        title: "Cloud Delivery, CLI & Legacy Go",
+        challenge:
+          "New projects lost time to inconsistent environments and manual AWS release steps, while Go legacy services still needed ongoing maintenance.",
+        solution:
+          "Organize AWS workloads (EC2, ECS, Lambda), add CI/CD with GitHub Actions / Docker, ship a scaffolding CLI, and continue extending in-production Go legacy code.",
+        result:
+          "Faster project kickoff, less environment drift, and continuous care for legacy Go alongside newer delivery tooling.",
+        stack: ["aws", "docker", "github-actions", "go", "nodejs", "typescript"],
       },
       {
         title: "Document OCR & Classification",
         challenge:
-          "Document-heavy workflows still depended on people reading and sorting files, which slowed down as volume grew and raised error risk.",
+          "Document workflows depended on people reading and sorting files, slowing down as volume grew.",
         solution:
-          "Design/build an OCR + classification flow with Azure Form Recognizer for extraction, then hand structured data to internal backend services for storage and downstream use.",
+          "Design an OCR + classification flow with Azure Form Recognizer, then push extracted data into internal backend storage and workflows.",
         result:
-          "Faster intake of document data into systems and less manual read/sort effort (exact percentages remain internal).",
-        stack: ["azure", "nodejs", "typescript", "python"],
-      },
-      {
-        title: "AI Search for Internal Knowledge",
-        challenge:
-          "Need faster internal Q&A over company knowledge, with AI introduced under controlled scope — no public exposure of proprietary data.",
-        solution:
-          "Prototype Azure OpenAI / AI Search with a RAG-style approach on internal tools for safe querying of organizational knowledge.",
-        result:
-          "Usable internal prototype, plus clearer insight into answer quality versus data-prep requirements before wider adoption.",
-        stack: ["azure", "openai", "nodejs", "typescript"],
+          "Faster document intake into systems and less manual read/sort work (exact percentages remain internal).",
+        stack: ["azure", "nodejs", "typescript", "python", "prisma"],
       },
     ],
     languages: [
@@ -445,9 +464,10 @@ export const resumeByLocale: Record<Locale, ResumeContent> = {
         location: "Wang Thonglang, Bangkok",
         role: "Full Stack Programmer",
         highlights: [
-          "Build and maintain product work with React (TypeScript) + Node.js, with focus on APIs, data flow, and reliability for systems the business uses daily",
-          "Run AWS workloads (EC2, ECS, Lambda) and keep release paths repeatable for the team",
-          "Build a project-scaffolding CLI and tighten GitHub workflows to cut kickoff time and reduce environment mismatches",
+          "Build NestJS API gateway to take incoming load and route work to office-system micro APIs; also work React (TypeScript) + Node.js where the product needs it",
+          "Use Prisma as the main data-access layer across MySQL, PostgreSQL, and SQL Server",
+          "Maintain and extend Go services on top of organization legacy code still in production",
+          "Run AWS workloads (EC2, ECS, Lambda) and build a project-scaffolding CLI plus GitHub workflow improvements to cut kickoff time and environment drift",
         ],
       },
       {
