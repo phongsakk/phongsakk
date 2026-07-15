@@ -9,6 +9,10 @@ type ResumeViewProps = {
   content: ResumeContent;
 };
 
+function shortLink(url: string) {
+  return url.replace(/^https?:\/\/(www\.)?/i, "").replace(/\/$/, "");
+}
+
 export function ResumeView({ locale, content }: ResumeViewProps) {
   const {
     ui,
@@ -91,22 +95,22 @@ export function ResumeView({ locale, content }: ResumeViewProps) {
                 <li>LINE: {profile.lineId}</li>
                 <li>
                   <a
-                    className="underline-offset-2 hover:underline"
+                    className="underline-offset-2 hover:underline break-all"
                     href={profile.github}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {ui.github}
+                    {shortLink(profile.github)}
                   </a>
                 </li>
                 <li>
                   <a
-                    className="underline-offset-2 hover:underline"
+                    className="underline-offset-2 hover:underline break-all"
                     href={profile.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {ui.linkedin}
+                    {shortLink(profile.linkedin)}
                   </a>
                 </li>
               </ul>
