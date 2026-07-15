@@ -47,7 +47,7 @@ LinkedIn: [พงษ์ศักดิ์ ยอดเสาดี](https://www.
 ## ทักษะ
 
 - **หลัก:** Node.js, TypeScript, Express, AWS, Docker, React  
-- **รอง:** NestJS, Go, PHP, Laravel, PostgreSQL, MySQL, Prisma, Next.js, LINE LIFF, Firebase, Azure, Git, GitHub Actions, Linux, Postman, SQL, Python, OpenAI/RAG, Power BI, Jenkins  
+- **รอง:** NestJS, Go, Laravel, PostgreSQL, MySQL, Prisma, Next.js, LINE LIFF, Firebase, Azure, GitHub Actions, Linux, Python  
 
 ## สถาปัตยกรรมระบบภายในที่คัดสรร
 

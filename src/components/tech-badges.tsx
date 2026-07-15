@@ -64,7 +64,7 @@ export const techMeta: Record<TechId, TechMeta> = {
     id: "openai",
     label: "OpenAI / RAG",
     logo: "openai-icon",
-    color: "#1F6B63",
+    color: "#2F54DB",
   },
   powerbi: {
     id: "powerbi",
@@ -117,7 +117,7 @@ export function TechBadge({ id }: { id: TechId }) {
 
 export function TechBadgeList({ items }: { items: TechId[] }) {
   return (
-    <div className="flex flex-wrap gap-2">
+    <div className="print-badge-list flex flex-wrap gap-2">
       {items.map((id) => (
         <TechBadge key={id} id={id} />
       ))}
