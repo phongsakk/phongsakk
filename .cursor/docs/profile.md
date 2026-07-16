@@ -1,7 +1,7 @@
 # Profile — พงษ์ศักดิ์ ยอดเสาดี
 
 เวอร์ชันอ้างอิงสำหรับเว็บ `/th` · `/en`  
-โทนการเขียน: **วลีละประธาน** (ดูรายละเอียดใน [`content-process.md`](content-process.md))
+โทนการเขียน: **ภาษากึ่งทางการ / วลีละประธาน** (ดูรายละเอียดใน [`content-process.md`](content-process.md))
 
 ---
 
@@ -15,11 +15,11 @@ LinkedIn: [พงษ์ศักดิ์ ยอดเสาดี](https://www.
 
 ## สรุปคุณสมบัติ
 
-ทำงานสาย Backend และ Full Stack เป็นหลัก โดยโฟกัสการออกแบบ API, pipeline ข้อมูล และระบบบน cloud ที่ทีมใช้จริงทุกวัน
+ถนัดงานสาย Backend และ Full Stack เป็นหลัก มีความชำนาญในการพัฒนา API จัดการ pipeline ข้อมูล และพัฒนาฟีเจอร์ที่ทีมใช้งานจริงในแต่ละวัน
 
-รับผิดชอบระบบภายในองค์กรเป็นหลัก ตั้งแต่การประมวลผลข้อมูลปริมาณมาก ไปจนถึงเครื่องมือช่วย deploy และจัดการเอกสาร จึงเน้นโจทย์กับผลกระทบมากกว่าการโชว์ UI
+มีประสบการณ์ดูแลระบบภายในองค์กรอย่างครบวงจร ตั้งแต่การประมวลผลข้อมูลปริมาณมาก ไปจนถึงการพัฒนาเครื่องมือช่วย deploy และระบบจัดการเอกสาร สามารถทำงานได้ทั้ง Backend และ Frontend แต่มีความถนัดและความสนใจเป็นพิเศษในฝั่งระบบหลังบ้านและโครงสร้างข้อมูล
 
-สนใจตำแหน่ง Backend เป็นอันดับแรก รองลงมาคือ Full Stack และ System Analyst เพื่ออยู่กับระบบแกนขององค์กรและช่วยวางโครงสร้างที่ขยายต่อได้ในระยะยาว
+สนใจตำแหน่ง Backend Developer และ Full Stack Developer เป็นหลัก เนื่องจากสอดคล้องกับประสบการณ์ที่ผ่านมา ส่วน System Analyst (SA) ยินดีพิจารณาเป็นทางเลือกในการพัฒนาต่อไป
 
 ## ตำแหน่งที่สนใจ
 
@@ -30,19 +30,19 @@ LinkedIn: [พงษ์ศักดิ์ ยอดเสาดี](https://www.
 ## ประสบการณ์การทำงาน
 
 ### Full Stack Programmer — Think Bit Co., Ltd. (เม.ย. 2567 — ปัจจุบัน)
-- พัฒนา backend ด้วย NestJS เป็น API gateway รับโหลดแล้วจ่ายงานต่อไปยัง API ย่อยในระบบสำนักงาน และใช้ React (TypeScript) + Node.js ตามที่ระบบต้องการ
-- ใช้ Prisma เป็นชั้นเข้าถึงฐานข้อมูลหลักกับ MySQL, PostgreSQL และ SQL Server
-- บำรุงรักษาและต่อยอดโค้ด Go จากระบบ legacy ที่องค์กรใช้อยู่ต่อเนื่อง
-- ดูแล workload บน AWS (EC2, ECS, Lambda) และพัฒนา CLI สำหรับ scaffold โปรเจกต์ + ปรับ workflow บน GitHub
+- พัฒนา backend ด้วย NestJS เป็น API gateway รับโหลดจากภายนอก แล้วจ่ายงานต่อไปยัง API ย่อยในระบบสำนักงาน พร้อมพัฒนาส่วน frontend/service ด้วย React (TypeScript) และ Node.js ตามความต้องการของระบบ
+- ใช้ Prisma เป็นชั้นเข้าถึงฐานข้อมูลหลัก สำหรับ MySQL, PostgreSQL และ SQL Server
+- บำรุงรักษาและต่อยอดบริการ Go จากระบบ legacy ที่องค์กรใช้งานอยู่อย่างต่อเนื่อง
+- ดูแล workload บน AWS (EC2, ECS, Lambda) และพัฒนา CLI สำหรับ scaffold โปรเจกต์ รวมทั้งปรับปรุง workflow บน GitHub เพื่อลดเวลาเริ่มงานและความคลาดเคลื่อนของสภาพแวดล้อม
 
 ### Front End Programmer (React) — Real Factory (ก.พ. — เม.ย. 2567)
-- พัฒนาเว็บบน React + TypeScript สำหรับ LINE LIFF จัดการข้อจำกัดของ WebView และการเชื่อมต่อข้อมูลให้ใช้งานจริงได้
-- โฟกัส flow การใช้งานจริงใน LINE และจับคู่หน้าจอกับเงื่อนไขธุรกิจ
+- พัฒนาเว็บแอปพลิเคชันด้วย React + TypeScript ภายใต้สภาพแวดล้อม LINE LIFF จัดการข้อจำกัดของ WebView และการเชื่อมต่อข้อมูลให้ใช้งานจริงได้
+- เน้น flow การใช้งานจริงใน LINE และการจับคู่หน้าจอกับเงื่อนไขธุรกิจ มากกว่าการออกแบบส่วนติดต่อผู้ใช้ที่เน้นเพียงความสวยงาม
 
 ### Programmer (PHP / Node.js) — Bangkok Web Solution (ต.ค. 2565 — ก.พ. 2567)
-- ออกแบบและพัฒนาระบบคำนวณที่ดึงข้อมูลภายนอกเฉลี่ยราว 1 ล้านรายการต่อวัน แล้วคัดกรองก่อนลง MySQL
-- แยกขั้นประมวลผลและเก็บเฉพาะผลที่จำเป็น เพื่อรักษาความถูกต้องภายใต้ปริมาณข้อมูลสูง
-- พัฒนาเว็บจัดการด้วย Laravel 10 ให้ทีมตรวจสถานะและติดตามผลได้เอง
+- ออกแบบและพัฒนา ETL ด้วย Node.js เพื่อดึงข้อมูลจากแหล่งภายนอกเฉลี่ยราว 1 ล้านรายการต่อวัน แล้วคัดกรองก่อนจัดเก็บลง MySQL
+- แยกขั้นประมวลผลและจัดเก็บเฉพาะผลลัพธ์ที่จำเป็น เพื่อรักษาความถูกต้องภายใต้ปริมาณข้อมูลสูง
+- เชื่อมผลประมวลผลเข้ากับระบบสะสมแต้มบนเว็บที่พัฒนาด้วย Laravel 10 และใช้งานจริงที่ reward.exat.co.th
 
 ## ทักษะ
 
@@ -56,8 +56,7 @@ LinkedIn: [พงษ์ศักดิ์ ยอดเสาดี](https://www.
 3. Cloud Delivery, CLI & Legacy Go  
 4. Document OCR & Classification  
 
-รายละเอียดโจทย์ / วิธีจัดการ / ผล ดูบนเว็บ  
-*(ตัด AI Search prototype ออกจากหน้าหลัก เพื่อโฟกัสเคส production / backend)*
+รายละเอียดโจทย์ / วิธีจัดการ / ผล ดูบนเว็บ
 
 ## ประวัติการศึกษา
 
@@ -79,11 +78,11 @@ LinkedIn: [Phongsak Yodsaodee](https://www.linkedin.com/in/พงษ์ศัก
 
 ## Summary
 
-Focus on Backend and Full Stack work — APIs, data pipelines, and cloud systems used by teams every day.
+Primarily focused on Backend and Full Stack development, with strong expertise in building APIs, managing data pipelines, and developing features that teams rely on daily.
 
-Mostly internal enterprise systems: high-volume processing, delivery tooling, and document workflows. Prefer clear problem/impact over polished demos.
+Experienced in end-to-end ownership of internal enterprise systems — from processing large volumes of data to building deployment tools and document management systems. Comfortable working across both Backend and Frontend, with particular strength and interest in backend systems and data architecture.
 
-Targeting Backend first, then Full Stack and System Analyst, to own core systems and help shape scalable architecture.
+Primarily interested in Backend Developer and Full Stack Developer roles, aligned with prior experience. Also open to System Analyst (SA) roles as a path for further professional growth.
 
 ## Education note
 

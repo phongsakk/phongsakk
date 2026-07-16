@@ -150,7 +150,7 @@ export const resumeByLocale: Record<Locale, ResumeContent> = {
     },
     profile: {
       name: "พงษ์ศักดิ์ ยอดเสาดี",
-      headline: "Backend · Full Stack · System Analyst",
+      headline: "Backend · Full Stack",
       location: "บางกะปิ กรุงเทพมหานคร",
       phone: "093-320-8166",
       email: "phongsak.ysd@gmail.com",
@@ -158,9 +158,9 @@ export const resumeByLocale: Record<Locale, ResumeContent> = {
       github: "https://github.com/phongsakk",
       linkedin: "https://www.linkedin.com/in/พงษ์ศักดิ์-ยอดเสาดี-924b361a5/",
       summary: [
-        "ทำงานสาย Backend และ Full Stack เป็นหลัก โดยโฟกัสการออกแบบ API, pipeline ข้อมูล และระบบบน cloud ที่ทีมใช้จริงทุกวัน",
-        "รับผิดชอบระบบภายในองค์กรเป็นหลัก ตั้งแต่การประมวลผลข้อมูลปริมาณมาก ไปจนถึงเครื่องมือช่วย deploy และจัดการเอกสาร จึงเน้นโจทย์กับผลกระทบมากกว่าการโชว์ UI",
-        "สนใจตำแหน่ง Backend เป็นอันดับแรก รองลงมาคือ Full Stack และ System Analyst เพื่ออยู่กับระบบแกนขององค์กรและช่วยวางโครงสร้างที่ขยายต่อได้ในระยะยาว",
+        "ถนัดงานสาย Backend และ Full Stack เป็นหลัก มีความชำนาญในการพัฒนา API จัดการ pipeline ข้อมูล และพัฒนาฟีเจอร์ที่ทีมใช้งานจริงในแต่ละวัน",
+        "มีประสบการณ์ดูแลระบบภายในองค์กรอย่างครบวงจร ตั้งแต่การประมวลผลข้อมูลปริมาณมาก ไปจนถึงการพัฒนาเครื่องมือช่วย deploy และระบบจัดการเอกสาร สามารถทำงานได้ทั้ง Backend และ Frontend แต่มีความถนัดและความสนใจเป็นพิเศษในฝั่งระบบหลังบ้านและโครงสร้างข้อมูล",
+        "สนใจตำแหน่ง Backend Developer และ Full Stack Developer เป็นหลัก เนื่องจากสอดคล้องกับประสบการณ์ที่ผ่านมา ส่วน System Analyst (SA) ยินดีพิจารณาเป็นทางเลือกในการพัฒนาต่อไป",
       ],
     },
     jobInterests: ["1. Backend", "2. Full Stack", "3. System Analyst (SA)"],
@@ -191,50 +191,50 @@ export const resumeByLocale: Record<Locale, ResumeContent> = {
     learning: {
       title: "ความสนใจเพิ่มเติม",
       items: [
-        "ทำให้ CI/CD และ container workflow เสถียรขึ้น (Docker, GitHub Actions, AWS)",
-        "ใช้ Power BI / data อ่านผลจากระบบที่ดูแล",
-        "ต่อยอด AI automation / RAG ในงานภายในองค์กรอย่างระมัดระวัง",
+        "พัฒนา workflow ของ CI/CD และ container ให้มีเสถียรภาพมากขึ้น (Docker, GitHub Actions, AWS)",
+        "ใช้ Power BI และข้อมูลจากระบบที่ดูแลเพื่อวิเคราะห์และติดตามผลลัพธ์",
+        "ต่อยอดการใช้ AI automation และ RAG ในงานภายในองค์กรอย่างระมัดระวังและมีหลักเกณฑ์",
       ],
     },
     projects: [
       {
         title: "High-Performance Data Pipeline",
         challenge:
-          "ต้องดึงข้อมูลจากฐานข้อมูลภายนอกเฉลี่ยราววันละ 1 ล้านรายการ แล้วคำนวณให้ทันใช้งานจริง หากเก็บทุกอย่างลง MySQL ตรงๆ โหลดและเวลาตอบสนองจะพังง่าย",
+          "ระบบสะสมแต้มบนเว็บต้องรับข้อมูลจากแหล่งภายนอกจำนวนมากและประมวลผลให้ทันใช้งานจริง โดยมีภาระเฉลี่ยราววันละ 1 ล้านรายการ หากจัดเก็บข้อมูลทั้งหมดลง MySQL โดยตรงจะกระทบต่อประสิทธิภาพและเวลาตอบสนอง",
         solution:
-          "แยกขั้นนำเข้า คัดกรอง และคำนวณด้วย PHP / Node.js เก็บเฉพาะผลที่ธุรกิจต้องใช้จริงลง MySQL และทำหน้าจัดการด้วย Laravel ให้ตรวจสถานะย้อนหลังได้",
+          "ออกแบบและพัฒนา ETL ด้วย Node.js โดยแยกขั้นนำเข้า คัดกรอง และคำนวณ จากนั้นจัดเก็บเฉพาะผลลัพธ์ที่จำเป็นลง MySQL และเชื่อมการใช้งานเข้ากับระบบเว็บที่พัฒนาด้วย Laravel 10",
         result:
-          "รองรับปริมาณระดับล้านรายการต่อวันได้ต่อเนื่อง โดยไม่ยัดข้อมูลเกินจำเป็นลงฐานข้อมูล",
+          "รองรับปริมาณระดับล้านรายการต่อวันได้อย่างต่อเนื่อง และนำผลประมวลผลไปใช้งานจริงบนระบบสะสมแต้ม (reward.exat.co.th)",
         stack: ["php", "laravel", "nodejs", "mysql", "prisma", "sql"],
       },
       {
         title: "NestJS API Gateway (Office Systems)",
         challenge:
-          "ระบบสำนักงานมี API ย่อยหลายชุด การให้ client เรียตรงจะกระจายโหลดยากและควบคุม entry point ไม่ได้",
+          "ระบบสำนักงานมี API ย่อยหลายชุด การให้ client เรียกใช้งานโดยตรงทำให้กระจายโหลดได้ยากและควบคุมจุดเข้าใช้งานไม่ได้",
         solution:
-          "สร้าง NestJS เป็น API gateway รับโหลดจากภายนอก แล้วจ่ายงานต่อไปยัง API ย่อยภายใน ใช้ Prisma เป็นชั้นเข้าถึง MySQL / PostgreSQL / SQL Server ตามบริการที่เกี่ยวข้อง",
+          "พัฒนา NestJS เป็น API gateway รับโหลดจากภายนอก แล้วจ่ายงานต่อไปยัง API ย่อยภายใน ใช้ Prisma เป็นชั้นเข้าถึง MySQL / PostgreSQL / SQL Server ตามบริการที่เกี่ยวข้อง",
         result:
-          "รวมทางเข้าของระบบสำนักงานไว้จุดเดียว กระจายงานไป API ย่อยได้ชัดเจน และจัดการเข้าถึงฐานข้อมูลหลายชนิดผ่านมาตรฐานเดียวกัน",
+          "รวมจุดเข้าใช้งานของระบบสำนักงานไว้ที่เดียว กระจายงานไปยัง API ย่อยได้อย่างชัดเจน และจัดการการเข้าถึงฐานข้อมูลหลายชนิดผ่านมาตรฐานเดียวกัน",
         stack: ["nestjs", "nodejs", "typescript", "prisma", "postgresql", "mysql"],
       },
       {
         title: "Cloud Delivery, CLI & Legacy Go",
         challenge:
-          "เริ่มโปรเจกต์ใหม่ในทีมเสียเวลา setup สภาพแวดล้อมไม่ตรงกัน มีขั้นตอน deploy บน AWS แบบแมนนวล และต้องบำรุงรักษาโค้ด Go จากระบบ legacy พร้อมกัน",
+          "การเริ่มโปรเจกต์ใหม่ในทีมใช้เวลาในการตั้งค่าสภาพแวดล้อมที่ไม่สอดคล้องกัน มีขั้นตอน deploy บน AWS แบบแมนนวล และต้องบำรุงรักษาโค้ด Go จากระบบ legacy ควบคู่กัน",
         solution:
-          "จัด workload บน AWS (EC2, ECS, Lambda) วาง CI/CD ด้วย GitHub Actions / Docker พัฒนา CLI สำหรับ scaffold โปรเจกต์ และต่อยอดบริการ Go ที่องค์กรใช้อยู่",
+          "จัด workload บน AWS (EC2, ECS, Lambda) วาง CI/CD ด้วย GitHub Actions / Docker พัฒนา CLI สำหรับ scaffold โปรเจกต์ และต่อยอดบริการ Go ที่องค์กรใช้งานอยู่",
         result:
-          "ขึ้นโปรเจกต์ใหม่ได้เร็วขึ้น ลดความต่างของ environment และดูแลระบบ legacy บน Go ได้อย่างต่อเนื่องควบคู่ของใหม่",
+          "เริ่มโปรเจกต์ใหม่ได้รวดเร็วขึ้น ลดความคลาดเคลื่อนของสภาพแวดล้อม และดูแลระบบ legacy บน Go ได้อย่างต่อเนื่องควบคู่ระบบใหม่",
         stack: ["aws", "docker", "github-actions", "go", "nodejs", "typescript"],
       },
       {
         title: "Document OCR & Classification",
         challenge:
-          "งานเอกสารพึ่งคนอ่านและแยกประเภท ทำให้ช้าและผิดพลาดง่ายเมื่อปริมาณสูงขึ้น",
+          "กระบวนการจัดการเอกสารยังพึ่งการอ่านและแยกประเภทด้วยมือ ทำให้ใช้เวลานานและเสี่ยงต่อความผิดพลาดเมื่อปริมาณเพิ่มขึ้น",
         solution:
-          "ออกแบบ flow OCR + classification ด้วย Azure Form Recognizer แล้วส่งข้อมูลที่ได้ไป backend เพื่อจัดเก็บและใช้งานต่อในระบบภายใน",
+          "ออกแบบ flow ของ OCR และ classification ด้วย Azure Form Recognizer แล้วส่งข้อมูลที่ได้ไปยัง backend เพื่อจัดเก็บและใช้งานต่อในระบบภายใน",
         result:
-          "ดึงข้อมูลจากเอกสารเข้าสู่ระบบได้เร็วขึ้น และลดงานมือในขั้นอ่าน–แยกประเภท (รายละเอียดเชิงตัวเลขอยู่ภายใต้ระบบภายใน)",
+          "นำข้อมูลจากเอกสารเข้าสู่ระบบได้รวดเร็วขึ้น และลดงานด้วยมือในขั้นอ่านและแยกประเภท (รายละเอียดเชิงตัวเลขอยู่ภายใต้ระบบภายใน)",
         stack: ["azure", "nodejs", "typescript", "python", "prisma"],
       },
     ],
@@ -261,10 +261,10 @@ export const resumeByLocale: Record<Locale, ResumeContent> = {
         location: "วังทองหลาง กรุงเทพฯ",
         role: "Full Stack Programmer",
         highlights: [
-          "พัฒนา backend ด้วย NestJS เป็น API gateway รับโหลดแล้วจ่ายงานต่อไปยัง API ย่อยในระบบสำนักงาน และใช้ React (TypeScript) + Node.js ด้าน frontend/service ที่เกี่ยวข้อง",
-          "ใช้ Prisma เป็นชั้นเข้าถึงฐานข้อมูลหลักในการทำงานกับ MySQL, PostgreSQL และ SQL Server",
-          "บำรุงรักษาและต่อยอดโค้ด Go จากระบบ legacy ที่องค์กรใช้อยู่ต่อเนื่อง",
-          "ดูแล workload บน AWS (EC2, ECS, Lambda) และพัฒนา CLI สำหรับ scaffold โปรเจกต์ + ปรับ workflow บน GitHub เพื่อลดเวลาเริ่มงานและความคลาดเคลื่อนของ environment",
+          "พัฒนา backend ด้วย NestJS เป็น API gateway รับโหลดจากภายนอก แล้วจ่ายงานต่อไปยัง API ย่อยในระบบสำนักงาน พร้อมพัฒนาส่วน frontend/service ด้วย React (TypeScript) และ Node.js ตามความต้องการของระบบ",
+          "ใช้ Prisma เป็นชั้นเข้าถึงฐานข้อมูลหลัก สำหรับ MySQL, PostgreSQL และ SQL Server",
+          "บำรุงรักษาและต่อยอดบริการ Go จากระบบ legacy ที่องค์กรใช้งานอยู่อย่างต่อเนื่อง",
+          "ดูแล workload บน AWS (EC2, ECS, Lambda) และพัฒนา CLI สำหรับ scaffold โปรเจกต์ รวมทั้งปรับปรุง workflow บน GitHub เพื่อลดเวลาเริ่มงานและความคลาดเคลื่อนของสภาพแวดล้อม",
         ],
       },
       {
@@ -273,8 +273,8 @@ export const resumeByLocale: Record<Locale, ResumeContent> = {
         location: "ดอนเมือง กรุงเทพฯ",
         role: "Front End Programmer (React)",
         highlights: [
-          "พัฒนาเว็บบน React + TypeScript ที่ต้องรันใน LINE LIFF จัดการข้อจำกัดของ WebView และการเชื่อมต่อข้อมูลให้ใช้งานจริงได้",
-          "โฟกัส flow การใช้งานจริงใน LINE และจับคู่หน้าจอกับเงื่อนไขธุรกิจมากกว่าการทำ UI สวยอย่างเดียว",
+          "พัฒนาเว็บแอปพลิเคชันด้วย React + TypeScript ภายใต้สภาพแวดล้อม LINE LIFF จัดการข้อจำกัดของ WebView และการเชื่อมต่อข้อมูลให้ใช้งานจริงได้",
+          "เน้น flow การใช้งานจริงใน LINE และการจับคู่หน้าจอกับเงื่อนไขธุรกิจ มากกว่าการออกแบบส่วนติดต่อผู้ใช้ที่เน้นเพียงความสวยงาม",
         ],
       },
       {
@@ -283,9 +283,9 @@ export const resumeByLocale: Record<Locale, ResumeContent> = {
         location: "วังทองหลาง กรุงเทพฯ",
         role: "Programmer (PHP / Node.js)",
         highlights: [
-          "ออกแบบและพัฒนาระบบคำนวณที่ดึงข้อมูลภายนอกเฉลี่ยราว 1 ล้านรายการต่อวัน แล้วคัดกรองก่อนลง MySQL",
-          "แยกขั้นประมวลผลและเก็บเฉพาะผลที่จำเป็น เพื่อรักษาความถูกต้องภายใต้ปริมาณข้อมูลสูง",
-          "พัฒนาเว็บจัดการด้วย Laravel 10 ให้ทีมตรวจสถานะและติดตามผลได้เอง",
+          "ออกแบบและพัฒนา ETL ด้วย Node.js เพื่อดึงข้อมูลจากแหล่งภายนอกเฉลี่ยราว 1 ล้านรายการต่อวัน แล้วคัดกรองก่อนจัดเก็บลง MySQL",
+          "แยกขั้นประมวลผลและจัดเก็บเฉพาะผลลัพธ์ที่จำเป็น เพื่อรักษาความถูกต้องภายใต้ปริมาณข้อมูลสูง",
+          "เชื่อมผลประมวลผลเข้ากับระบบสะสมแต้มบนเว็บที่พัฒนาด้วย Laravel 10 และใช้งานจริงที่ reward.exat.co.th",
         ],
       },
     ],
@@ -347,9 +347,9 @@ export const resumeByLocale: Record<Locale, ResumeContent> = {
       github: "https://github.com/phongsakk",
       linkedin: "https://www.linkedin.com/in/พงษ์ศักดิ์-ยอดเสาดี-924b361a5/",
       summary: [
-        "Focus on Backend and Full Stack work — APIs, data pipelines, and cloud systems used by teams every day.",
-        "Mostly internal enterprise systems: high-volume processing, delivery tooling, and document workflows. Prefer clear problem/impact over polished demos.",
-        "Targeting Backend first, then Full Stack and System Analyst, to own core systems and help shape architectures that can grow with the organization.",
+        "Primarily focused on Backend and Full Stack development, with strong expertise in building APIs, managing data pipelines, and developing features that teams rely on daily.",
+        "Experienced in end-to-end ownership of internal enterprise systems — from processing large volumes of data to building deployment tools and document management systems. Comfortable working across both Backend and Frontend, with particular strength and interest in backend systems and data architecture.",
+        "Primarily interested in Backend Developer and Full Stack Developer roles, aligned with prior experience. Also open to System Analyst (SA) roles as a path for further professional growth.",
       ],
     },
     jobInterests: ["1. Backend", "2. Full Stack", "3. System Analyst (SA)"],
@@ -380,50 +380,50 @@ export const resumeByLocale: Record<Locale, ResumeContent> = {
     learning: {
       title: "Focus areas",
       items: [
-        "Making CI/CD and container workflows more reliable (Docker, GitHub Actions, AWS)",
-        "Using Power BI / data to read signals from systems under care",
-        "Extending careful internal AI automation / RAG use cases",
+        "Improve CI/CD and container workflow reliability (Docker, GitHub Actions, AWS)",
+        "Use Power BI and operational data from maintained systems for analysis and monitoring",
+        "Extend AI automation and RAG use cases within internal workflows with clear guardrails",
       ],
     },
     projects: [
       {
         title: "High-Performance Data Pipeline",
         challenge:
-          "Need to pull roughly 1 million external records per day, compute results in time for business use, and avoid hammering MySQL with indiscriminate writes.",
+          "A web-based loyalty points system required high-volume external data ingestion and near-real-time processing, averaging roughly 1 million records per day. Writing all raw data directly to MySQL would degrade performance and response times.",
         solution:
-          "Split ingestion, filtering, and computation across PHP / Node.js; persist only required outcomes to MySQL; provide a Laravel ops UI for status checks.",
+          "Design and build an ETL flow with Node.js by separating ingestion, filtering, and computation; persist only required business outcomes to MySQL; integrate results into the Laravel 10 web application.",
         result:
-          "Sustained ~1M records/day with auditable results and fewer unnecessary database writes.",
+          "Sustained ~1M records/day with stable throughput and production use in the loyalty points platform (reward.exat.co.th).",
         stack: ["php", "laravel", "nodejs", "mysql", "prisma", "sql"],
       },
       {
         title: "NestJS API Gateway (Office Systems)",
         challenge:
-          "Office systems expose many micro APIs; calling them directly makes load distribution and entry-point control difficult.",
+          "Office systems expose multiple micro APIs; direct client calls make load distribution difficult and entry-point control inconsistent.",
         solution:
-          "Build a NestJS API gateway to accept incoming load and route work to internal micro APIs; use Prisma against MySQL / PostgreSQL / SQL Server as needed per service.",
+          "Build a NestJS API gateway to accept incoming load and route work to internal micro APIs; use Prisma against MySQL / PostgreSQL / SQL Server as required per service.",
         result:
-          "Single entry point for office traffic, clearer routing to downstream APIs, and consistent multi-database access through Prisma.",
+          "Single entry point for office traffic, clearer routing to downstream APIs, and consistent multi-database access through a unified standard.",
         stack: ["nestjs", "nodejs", "typescript", "prisma", "postgresql", "mysql"],
       },
       {
         title: "Cloud Delivery, CLI & Legacy Go",
         challenge:
-          "New projects lost time to inconsistent environments and manual AWS release steps, while Go legacy services still needed ongoing maintenance.",
+          "New projects required significant time to set up inconsistent environments, relied on manual AWS release steps, and still needed ongoing maintenance of Go legacy services.",
         solution:
-          "Organize AWS workloads (EC2, ECS, Lambda), add CI/CD with GitHub Actions / Docker, ship a scaffolding CLI, and continue extending in-production Go legacy code.",
+          "Organize AWS workloads (EC2, ECS, Lambda), implement CI/CD with GitHub Actions / Docker, deliver a project-scaffolding CLI, and continue extending in-production Go legacy services.",
         result:
-          "Faster project kickoff, less environment drift, and continuous care for legacy Go alongside newer delivery tooling.",
+          "Faster project kickoff, reduced environment drift, and continuous maintenance of Go legacy systems alongside newer delivery tooling.",
         stack: ["aws", "docker", "github-actions", "go", "nodejs", "typescript"],
       },
       {
         title: "Document OCR & Classification",
         challenge:
-          "Document workflows depended on people reading and sorting files, slowing down as volume grew.",
+          "Document workflows still relied on manual reading and classification, causing delays and increasing error risk as volume grew.",
         solution:
-          "Design an OCR + classification flow with Azure Form Recognizer, then push extracted data into internal backend storage and workflows.",
+          "Design an OCR and classification flow with Azure Form Recognizer, then route extracted data into internal backend storage and workflows.",
         result:
-          "Faster document intake into systems and less manual read/sort work (exact percentages remain internal).",
+          "Faster document intake into systems and reduced manual read-and-sort work (exact metrics remain internal).",
         stack: ["azure", "nodejs", "typescript", "python", "prisma"],
       },
     ],
@@ -450,10 +450,10 @@ export const resumeByLocale: Record<Locale, ResumeContent> = {
         location: "Wang Thonglang, Bangkok",
         role: "Full Stack Programmer",
         highlights: [
-          "Build NestJS API gateway to take incoming load and route work to office-system micro APIs; also work React (TypeScript) + Node.js where the product needs it",
-          "Use Prisma as the main data-access layer across MySQL, PostgreSQL, and SQL Server",
-          "Maintain and extend Go services on top of organization legacy code still in production",
-          "Run AWS workloads (EC2, ECS, Lambda) and build a project-scaffolding CLI plus GitHub workflow improvements to cut kickoff time and environment drift",
+          "Develop NestJS API gateway to accept incoming load and route work to office-system micro APIs; also build frontend/service components with React (TypeScript) and Node.js as required",
+          "Use Prisma as the primary data-access layer across MySQL, PostgreSQL, and SQL Server",
+          "Maintain and extend Go services built on organization legacy code still in production",
+          "Manage AWS workloads (EC2, ECS, Lambda) and build a project-scaffolding CLI plus GitHub workflow improvements to reduce kickoff time and environment drift",
         ],
       },
       {
@@ -462,8 +462,8 @@ export const resumeByLocale: Record<Locale, ResumeContent> = {
         location: "Don Mueang, Bangkok",
         role: "Front End Programmer (React)",
         highlights: [
-          "Ship React + TypeScript apps on LINE LIFF, working around WebView constraints and real integration requirements",
-          "Focus on actual in-LINE user flows and business rules more than cosmetic UI polish",
+          "Develop React + TypeScript web applications within the LINE LIFF environment, addressing WebView constraints and data integration for production use",
+          "Focus on in-LINE user flows and business-rule alignment rather than interface design for visual appeal alone",
         ],
       },
       {
@@ -472,9 +472,9 @@ export const resumeByLocale: Record<Locale, ResumeContent> = {
         location: "Wang Thonglang, Bangkok",
         role: "Programmer (PHP / Node.js)",
         highlights: [
-          "Design and build computation systems that ingest ~1M external records per day, filtering before MySQL writes",
+          "Design and build ETL services with Node.js to ingest ~1M external records per day, filtering before persisting to MySQL",
           "Separate processing stages and persist only required outcomes to balance volume with correctness",
-          "Build Laravel 10 ops pages so the team can monitor and review results",
+          "Integrate processed data into a Laravel 10 web-based loyalty points system in production (reward.exat.co.th)",
         ],
       },
     ],
