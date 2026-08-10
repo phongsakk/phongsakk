@@ -30,7 +30,7 @@ src/
   data/
     resume.ts
 public/
-  profile.png
+  54858537.jpg
 .cursor/docs/          # เอกสารสำหรับ AI agent / ผู้ดูแล content
 ```
 

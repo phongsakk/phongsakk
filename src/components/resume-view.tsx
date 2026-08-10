@@ -37,7 +37,7 @@ export function ResumeView({ locale, content }: ResumeViewProps) {
         <header className="print-break-avoid grid gap-5 sm:grid-cols-[auto_1fr] sm:items-end">
           <div className="print-photo relative h-28 w-28 overflow-hidden rounded-2xl bg-[var(--accent-soft)] sm:h-32 sm:w-32">
             <Image
-              src="/profile.png"
+              src="/54858537.jpg"
               alt={profile.name}
               fill
               priority
